@@ -30,15 +30,18 @@ div21.appendChild(h2text1)
 div21.appendChild(h3text1)
 div2.appendChild(div21)
 
-
 h2text1.onclick = function (){
 
     let div22 = document.createElement("div")
     div22.className = "column"
     let ptext = document.createElement("p")
-    ptext.innerText="Esta es la segunda columna";
+    ptext.innerText="Conocimientos básicos de HTML y CSS";
+    let ptext2 = document.createElement("p")
+    ptext2.innerText = "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.";
     div22.appendChild(ptext)
+    div22.appendChild(ptext2)
     div2.appendChild(div22)
+
 
 }
 

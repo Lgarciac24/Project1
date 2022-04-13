@@ -5,7 +5,7 @@ html{
 }
 
 #body{
-    width: 50%;
+    width: 70%;
     margin: 20px auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
@@ -25,11 +25,17 @@ h1{
     font-size: 22px;
 }
 
-.column {
+.column1 {
     float: left;
-  width: 50%;
+  width: 30%;
   padding: 10px;
 
+}
+
+.column2{
+    float: left;
+  width: 70%;
+  padding: 10px;
 }
 
 h2 {
@@ -46,3 +52,41 @@ p {
     display: flex;
     
   }
+
+  .h3subtitle {
+      text-align: center;
+  }
+
+  .h2text1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #044dae;
+  }
+
+  .h3text1, .ptext {
+      font-size: 16px;
+      color: #5b5b5b;
+  }
+
+  .ptext2{
+      color: #c04822;
+  }
+
+  .h3subtitle {
+      color: #5b5b5b
+  }
+
+  .h5title {
+      font-size: 43px;
+    line-height: 0;
+    padding: 20px;
+    display: inline;
+  }
+
+  a{
+      text-decoration: none;
+  }
+  .div22311{
+      background-color: blue;
+  }
+
+ 

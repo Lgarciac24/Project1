@@ -71,6 +71,10 @@ p {
       color: #c04822;
   }
 
+  .h4title{
+    color: #5b5b5b
+  }
+
   .h3subtitle {
       color: #5b5b5b
   }
@@ -82,11 +86,42 @@ p {
     display: inline;
   }
 
-  a{
-      text-decoration: none;
-  }
-  .div22311{
-      background-color: blue;
+  .pathline{
+      stroke: black;
+      stroke-width: 3;
+      fill: none;
   }
 
+  a{
+      text-decoration: none;
+      color: #5b5b5b;
+  }
+
+
+  .div2231{
+    /* background-color: #7fc8eb3d; */
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    column-gap: 10%;
+    justify-content: center;
+  }
+
+  .div22311, .div22312{
+    text-align: center;
+    padding: 2%;
+    border: 2px solid #044dae;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 3px #044dae;;
+}
+  
+  .imglist, .homeworkimg {
+      width: 30%;
+  }
  
+  .textoButtons {
+      font-size: 13px;
+      margin: 1px;
+  }

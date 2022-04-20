@@ -8,8 +8,10 @@ html{
     width: 70%;
     margin: 20px auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: white;
+    background-color: #fffffd;
+    border: 2px dotted #dbc6b1;
     padding: 15px;
+    box-shadow: 0px 6px 21px 0px #dbc6b1;
     
 }
 
@@ -23,12 +25,13 @@ html{
 
 h1{
     font-size: 22px;
+    color: #382818
 }
 
 .column1 {
     float: left;
   width: 30%;
-  padding: 10px;
+  
 
 }
 
@@ -60,6 +63,7 @@ p {
   .h2text1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #044dae;
+    line-height: 0;
   }
 
   .h3text1, .ptext {
@@ -67,6 +71,36 @@ p {
       color: #5b5b5b;
   }
 
+  .divfiguras{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column ;
+      align-items: center;
+      padding: 5px 0;
+  }
+
+  .circulo {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: #bca785;
+  }
+
+  .line {
+    height: 68px; 
+    background-color: #bca785;
+    width: 7px; 
+ 
+  }
+  .line2 {
+    height: 85px; 
+    background-color: #bca785;
+    width: 7px; 
+ 
+  }
+  .div212, .div213 {
+ margin-top: 50px;
+}
   .ptext2{
       color: #c04822;
   }
@@ -86,11 +120,8 @@ p {
     display: inline;
   }
 
-  .svgfield{
+ 
   
-      border: 1px solid green;
-  }
-
   a{
       text-decoration: none;
       color: #5b5b5b;

@@ -35,10 +35,20 @@ div2.appendChild(div21)
 let div21path = document.createElement("div")
 div21path.className ="div21path"
 let pathline = document.createElement("svg")
-pathline.className = "pathline"
+pathline.className = "svgfield"
+let circle = document.createElement("circle")   
+circle.className = "svgcircle"
+
+pathline.setAttribute('width', '200')
+pathline.setAttribute('height', '200')
+
+circle.setAttribute('cx', '30')
+circle.setAttribute('cy', '10')
+circle.setAttribute('r', '10')
 
 div2.appendChild(div21path)
 div21path.appendChild(pathline)
+pathline.appendChild(circle)
 
 //Desde aqui necesito que suceda solo una vez
 

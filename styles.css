@@ -86,10 +86,9 @@ p {
     display: inline;
   }
 
-  .pathline{
-      stroke: black;
-      stroke-width: 3;
-      fill: none;
+  .svgfield{
+  
+      border: 1px solid green;
   }
 
   a{

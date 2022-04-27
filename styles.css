@@ -98,7 +98,13 @@ p {
     width: 7px; 
  
   }
-  .div212, .div213 {
+
+  .line3{
+    height: 67px; 
+    background-color: #bca785;
+    width: 7px; 
+  }
+  .div212, .div213, .div214{
  margin-top: 50px;
 }
   .ptext2{

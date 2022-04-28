@@ -104,7 +104,15 @@ p {
     background-color: #bca785;
     width: 7px; 
   }
-  .div212, .div213, .div214{
+
+  .line4{
+    height: 64px; 
+    background-color: #bca785;
+    width: 7px; 
+  }
+
+
+  .div212, .div213, .div214, .div215{
  margin-top: 50px;
 }
   .ptext2{
@@ -134,7 +142,7 @@ p {
   }
 
 
-  .div2231{
+  .div224{
     /* background-color: #7fc8eb3d; */
     padding: 3%;
     display: flex;
@@ -143,7 +151,7 @@ p {
     justify-content: center;
   }
 
-  .div22311, .div22312, .div22313{
+  .div2241, .div2242, .div2243{
     text-align: center;
     padding: 2%;
     border: 2px solid #044dae;

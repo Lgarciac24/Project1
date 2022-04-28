@@ -83,13 +83,22 @@ div21.className = "column1"
         let divline4 = document.createElement("div");
         divline4.className = "line4"
 
-       
 
         let divcircle5 = document.createElement("div");
         divcircle5.className = "circulo"
 
         divfiguras.appendChild(divline4)
         divfiguras.appendChild(divcircle5)
+
+        let divline5 = document.createElement("div");
+        divline5.className = "line5"
+
+
+        let divcircle6 = document.createElement("div");
+        divcircle6.className = "circulo"
+
+        divfiguras.appendChild(divline5)
+        divfiguras.appendChild(divcircle6)
 
 
     // let div21path = document.createElement("div")
@@ -665,5 +674,113 @@ let activa5 = false;
     
     }
       
+// Clase 6
 
+    let div216 = document.createElement("div")
+    div216.className = "div216"
+    
+    div21.appendChild(div216)
+    
+    
+    let h2text6 = document.createElement("h2")
+    h2text6.innerText = "Clase #6"
+    h2text6.className = "h2text1"
+    
+    let h3text6 = document.createElement("h3");
+    h3text6.innerText = "Objects"
+    h3text6.className = "h3text1"
+    
+    div216.appendChild(h2text6)
+    div216.appendChild(h3text6)
+        
+    let activa6 = false;
+    
+    
+      h2text6.onclick = function (){
+    
+        if(!activa6){  
+        
+        let h3subtitle = document.createElement("h3");
+        h3subtitle.innerText = "Sexta clase!";
+        h3subtitle.className = "h3subtitle"
+        let ptext = document.createElement("p")
+        ptext.innerText="Ya has llegado a más de la mitad de tu journey! En esta clase verás objetos y sus propiedades, además empezarás a usar Local Storage y JSON ";
+        ptext.className ="ptext"
+        let ptext2 = document.createElement("p")
+        ptext2.innerText = "Tarea: Crear un formulario con al menos 8 preguntas que guarde la información del usuario en el Local Storage, y al mismo tiempo muestre todas las respuestas en la página. Recuerda que debe ser aesthetically pleasing!";
+        ptext2.className = "ptext2"
+        div22.appendChild(h3subtitle)
+        div22.appendChild(ptext)
+        div22.appendChild(ptext2)
+        div2.appendChild(div22)
+    
+    
+        let div223 = document.createElement("div")
+        div223.className = "div223";
+    
+        let h4title = document.createElement("h4")
+        h4title.innerText = "Enlaces de interés para esta clase:"
+        h4title.className = "h4title"
+    
+        div22.appendChild(div223)
+        div223.appendChild(h4title)
+    
+        let div224 = document.createElement("div")
+        div224.className = "div224" 
+    
+        div22.appendChild(div224)
+    
+        let div2241 = document.createElement("div")
+        div2241.className = "div2241"
+    
+            let a1 = document.createElement("a")
+            a1.href= "https://www.w3schools.com/js/js_objects.asp"
+            a1.target = "blank"
+            let imglist = document.createElement("img")
+            imglist.src = "Image/list-icon.png"
+            imglist.className = "imglist"
+            ptextbuttons = document.createElement("p")
+            ptextbuttons.innerText = "Objects"
+            ptextbuttons.className = "textoButtons"
+    
+        div224.appendChild(div2241)
+        div2241.appendChild(a1)
+        a1.appendChild(imglist)
+        a1.appendChild(ptextbuttons)
+    
+        let div2242 = document.createElement("div")
+        div2242.className = "div2242"
+    
+            let a2 = document.createElement("a")
+            a2.href = "https://www.w3schools.com/jsref/prop_win_localstorage.asp"
+            a2.target = "blank"
+            let homeworkimg1 = document.createElement("img")
+            homeworkimg1.src = "Image/list-icon.png"
+            homeworkimg1.className = "imglist"
+            ptextbuttons2 = document.createElement("p")
+            ptextbuttons2.innerText = "Local Storage"
+            ptextbuttons2.className = "textoButtons"
+    
+    
+    
+        div224.appendChild(div2242)
+        div2242.appendChild(a2)
+        a2.appendChild(homeworkimg1)
+        a2.appendChild(ptextbuttons2)
+    
+    
+        activa6 = true;
+       
+          }
+        
+          else{
+            activa6 = false
+            divagain = document.getElementById("div22vacio").innerHTML = "";
+    
+        }
+        
+        }
+          
+    
+    
 

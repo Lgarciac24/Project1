@@ -111,8 +111,13 @@ p {
     width: 7px; 
   }
 
+  .line5{
+    height: 68px; 
+    background-color: #bca785;
+    width: 7px; 
+  }
 
-  .div212, .div213, .div214, .div215{
+  .div212, .div213, .div214, .div215, .div216{
  margin-top: 50px;
 }
   .ptext2{

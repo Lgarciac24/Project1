@@ -100,6 +100,26 @@ div21.className = "column1"
         divfiguras.appendChild(divline5)
         divfiguras.appendChild(divcircle6)
 
+        let divline6 = document.createElement("div");
+        divline6.className = "line6"
+
+
+        let divcircle7 = document.createElement("div");
+        divcircle7.className = "circulo"
+
+        divfiguras.appendChild(divline6)
+        divfiguras.appendChild(divcircle7)
+
+        let divline7 = document.createElement("div");
+        divline7.className = "line7"
+
+
+        let divcircle8 = document.createElement("div");
+        divcircle8.className = "circulo"
+
+        divfiguras.appendChild(divline7)
+        divfiguras.appendChild(divcircle8)
+
 
     // let div21path = document.createElement("div")
     // div21path.className ="div21path"
@@ -781,6 +801,220 @@ let activa5 = false;
         
         }
           
+
+// Clase 7
+
+let div217 = document.createElement("div")
+    div217.className = "div217"
+    
+    div21.appendChild(div217)
+    
+    
+    let h2text7 = document.createElement("h2")
+    h2text7.innerText = "Clase #7"
+    h2text7.className = "h2text1"
+    
+    let h3text7 = document.createElement("h3");
+    h3text7.innerText = "API and Fetch"
+    h3text7.className = "h3text1"
+    
+    div217.appendChild(h2text7)
+    div217.appendChild(h3text7)
+        
+    let activa7 = false;
+    
+    
+      h2text7.onclick = function (){
+    
+        if(!activa7){  
+        
+        let h3subtitle = document.createElement("h3");
+        h3subtitle.innerText = "Séptima clase!";
+        h3subtitle.className = "h3subtitle"
+        let ptext = document.createElement("p")
+        ptext.innerText="Cada vez más cerca!! En esta clase entrarás en el tema de los A.P.Is y la función Fetch para poder hacer uso de cualquier API";
+        ptext.className ="ptext"
+        let ptext2 = document.createElement("p")
+        ptext2.innerText = "Tarea: A la pagina que creaste la clase anterior conéctale una API y pinta sus datos.";
+        ptext2.className = "ptext2"
+        div22.appendChild(h3subtitle)
+        div22.appendChild(ptext)
+        div22.appendChild(ptext2)
+        div2.appendChild(div22)
+    
+    
+        let div223 = document.createElement("div")
+        div223.className = "div223";
+    
+        let h4title = document.createElement("h4")
+        h4title.innerText = "Enlaces de interés para esta clase:"
+        h4title.className = "h4title"
+    
+        div22.appendChild(div223)
+        div223.appendChild(h4title)
+    
+        let div224 = document.createElement("div")
+        div224.className = "div224" 
+    
+        div22.appendChild(div224)
+    
+        let div2241 = document.createElement("div")
+        div2241.className = "div2241"
+    
+            let a1 = document.createElement("a")
+            a1.href= "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+            a1.target = "blank"
+            let imglist = document.createElement("img")
+            imglist.src = "Image/list-icon.png"
+            imglist.className = "imglist"
+            ptextbuttons = document.createElement("p")
+            ptextbuttons.innerText = "Fetch"
+            ptextbuttons.className = "textoButtons"
+    
+        div224.appendChild(div2241)
+        div2241.appendChild(a1)
+        a1.appendChild(imglist)
+        a1.appendChild(ptextbuttons)
+    
+        let div2242 = document.createElement("div")
+        div2242.className = "div2242"
+    
+            let a2 = document.createElement("a")
+            a2.href = "https://aws.amazon.com/es/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses"
+            a2.target = "blank"
+            let homeworkimg1 = document.createElement("img")
+            homeworkimg1.src = "Image/list-icon.png"
+            homeworkimg1.className = "imglist"
+            ptextbuttons2 = document.createElement("p")
+            ptextbuttons2.innerText = "APIs"
+            ptextbuttons2.className = "textoButtons"
+    
+    
+    
+        div224.appendChild(div2242)
+        div2242.appendChild(a2)
+        a2.appendChild(homeworkimg1)
+        a2.appendChild(ptextbuttons2)
+    
+    
+        activa7 = true;
+       
+          }
+        
+          else{
+            activa7 = false
+            divagain = document.getElementById("div22vacio").innerHTML = "";
+    
+        }
+        
+        }
+
+        // Clase 8
+
+let div218 = document.createElement("div")
+div218.className = "div218"
+
+div21.appendChild(div218)
+
+
+let h2text8 = document.createElement("h2")
+h2text8.innerText = "Clase #8"
+h2text8.className = "h2text1"
+
+let h3text8 = document.createElement("h3");
+h3text8.innerText = "DOM"
+h3text8.className = "h3text1"
+
+div218.appendChild(h2text8)
+div218.appendChild(h3text8)
+    
+let activa8 = false;
+
+
+  h2text8.onclick = function (){
+
+    if(!activa8){  
+    
+    let h3subtitle = document.createElement("h3");
+    h3subtitle.innerText = "Séptima clase!";
+    h3subtitle.className = "h3subtitle"
+    let ptext = document.createElement("p")
+    ptext.innerText="Cada vez más cerca!! En esta clase entrarás en el tema de los A.P.Is y la función Fetch para poder hacer uso de cualquier API";
+    ptext.className ="ptext"
+    let ptext2 = document.createElement("p")
+    ptext2.innerText = "Tarea: A la pagina que creaste la clase anterior conéctale una API y pinta sus datos.";
+    ptext2.className = "ptext2"
+    div22.appendChild(h3subtitle)
+    div22.appendChild(ptext)
+    div22.appendChild(ptext2)
+    div2.appendChild(div22)
+
+
+    let div223 = document.createElement("div")
+    div223.className = "div223";
+
+    let h4title = document.createElement("h4")
+    h4title.innerText = "Enlaces de interés para esta clase:"
+    h4title.className = "h4title"
+
+    div22.appendChild(div223)
+    div223.appendChild(h4title)
+
+    let div224 = document.createElement("div")
+    div224.className = "div224" 
+
+    div22.appendChild(div224)
+
+    let div2241 = document.createElement("div")
+    div2241.className = "div2241"
+
+        let a1 = document.createElement("a")
+        a1.href= "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+        a1.target = "blank"
+        let imglist = document.createElement("img")
+        imglist.src = "Image/list-icon.png"
+        imglist.className = "imglist"
+        ptextbuttons = document.createElement("p")
+        ptextbuttons.innerText = "Fetch"
+        ptextbuttons.className = "textoButtons"
+
+    div224.appendChild(div2241)
+    div2241.appendChild(a1)
+    a1.appendChild(imglist)
+    a1.appendChild(ptextbuttons)
+
+    let div2242 = document.createElement("div")
+    div2242.className = "div2242"
+
+        let a2 = document.createElement("a")
+        a2.href = "https://aws.amazon.com/es/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses"
+        a2.target = "blank"
+        let homeworkimg1 = document.createElement("img")
+        homeworkimg1.src = "Image/list-icon.png"
+        homeworkimg1.className = "imglist"
+        ptextbuttons2 = document.createElement("p")
+        ptextbuttons2.innerText = "APIs"
+        ptextbuttons2.className = "textoButtons"
+
+
+
+    div224.appendChild(div2242)
+    div2242.appendChild(a2)
+    a2.appendChild(homeworkimg1)
+    a2.appendChild(ptextbuttons2)
+
+
+    activa8 = true;
+   
+      }
+    
+      else{
+        activa8 = false
+        divagain = document.getElementById("div22vacio").innerHTML = "";
+
+    }
+    
+    }
     
     
 

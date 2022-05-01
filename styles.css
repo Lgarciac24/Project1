@@ -117,7 +117,21 @@ p {
     width: 7px; 
   }
 
-  .div212, .div213, .div214, .div215, .div216{
+  .line6{
+    height: 66px; 
+    background-color: #bca785;
+    width: 7px; 
+  }
+
+  .line7{
+    height: 66px; 
+    background-color: #bca785;
+    width: 7px; 
+  }
+
+
+
+  .div212, .div213, .div214, .div215, .div216, .div217, .div218{
  margin-top: 50px;
 }
   .ptext2{

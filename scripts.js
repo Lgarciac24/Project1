@@ -120,6 +120,16 @@ div21.className = "column1"
         divfiguras.appendChild(divline7)
         divfiguras.appendChild(divcircle8)
 
+        let divline8 = document.createElement("div");
+        divline8.className = "line8"
+
+
+        let divcircle9 = document.createElement("div");
+        divcircle9.className = "circulo"
+
+        divfiguras.appendChild(divline8)
+        divfiguras.appendChild(divcircle9)
+
 
     // let div21path = document.createElement("div")
     // div21path.className ="div21path"
@@ -224,6 +234,45 @@ div21.className = "column1"
  
 
             
+        }
+
+        if (activa = true){
+            h2text2.className = "deactivated"
+            h3text2.className = "deactivated"
+            h2text3.className = "deactivated"
+            h3text3.className = "deactivated"
+            h2text4.className = "deactivated"
+            h3text4.className = "deactivated"
+            h2text5.className = "deactivated"
+            h3text5.className = "deactivated"
+            h2text6.className = "deactivated"
+            h3text6.className = "deactivated"
+            h2text7.className = "deactivated"
+            h3text7.className = "deactivated"
+            h2text8.className = "deactivated"
+            h3text8.className = "deactivated"
+            h2text9.className = "deactivated"
+            h3text9.className = "deactivated"
+            
+            // textos = ""
+
+
+
+            // for (let i = 2; i <= 9; i++) {
+            //      console.log(i);
+
+            //      let textoacambiar = "h2text" + (i) + '.className = "deactivated"'
+
+            //      textos = textoacambiar 
+            //      console.log(textos)
+                
+            // }
+
+
+
+
+        } else {
+
         }
        
         }
@@ -395,7 +444,7 @@ div21.className = "column1"
             a1.href= "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
             a1.target = "blank"
             let imglist = document.createElement("img")
-            imglist.src = "Image/list-icon.png"
+            imglist.src = "Image/homework-icon.png"
             imglist.className = "imglist"
             ptextbuttons = document.createElement("p")
             ptextbuttons.innerText = "Ejercicios if/else"
@@ -491,7 +540,7 @@ div21.className = "column1"
         h3subtitle.innerText = "Cuarta clase!";
         h3subtitle.className = "h3subtitle"
         let ptext = document.createElement("p")
-        ptext.innerText="En esta clase continuaremos con loops, pero en esta ocasión será WHILE loops. Muy similar a los FOR loops. Además aprenderás typeOf datos de Javascript y otros datos muy útiles como parseInt, parseFloar y toString";
+        ptext.innerText="En esta clase continuaremos con loops, pero en esta ocasión serán WHILE loops. Muy similar a los FOR loops. Además aprenderás typeOf datos de Javascript y otros datos muy útiles como parseInt, parseFloat y toString";
         ptext.className ="ptext"
         let ptext2 = document.createElement("p")
         ptext2.innerText = "Tarea: Resolver los 30 ejercicios anteriores pero ahora con While loops";
@@ -524,7 +573,7 @@ div21.className = "column1"
             a1.href= "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
             a1.target = "blank"
             let imglist = document.createElement("img")
-            imglist.src = "Image/list-icon.png"
+            imglist.src = "Image/homework-icon.png"
             imglist.className = "imglist"
             ptextbuttons = document.createElement("p")
             ptextbuttons.innerText = "Ejercicios if/else"
@@ -617,7 +666,7 @@ let activa5 = false;
     h3subtitle.innerText = "Quinta clase!";
     h3subtitle.className = "h3subtitle"
     let ptext = document.createElement("p")
-    ptext.innerText="Hoy verás los arrays o arreglos";
+    ptext.innerText="Hoy verás los arrays o arreglos y cómo usarlos para guardar todo tipo de datos bajo una misma categoría";
     ptext.className ="ptext"
     let ptext2 = document.createElement("p")
     ptext2.innerText = "Tarea: Hacer un escrito explicándo 15 funciones de los arrays";

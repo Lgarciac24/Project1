@@ -66,6 +66,12 @@ p {
     line-height: 0;
   }
 
+  .deactivated{
+    color: #949191;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
   .h3text1, .ptext {
       font-size: 16px;
       color: #5b5b5b;
@@ -129,6 +135,11 @@ p {
     width: 7px; 
   }
 
+  .line8{
+    height: 66px; 
+    background-color: #bca785;
+    width: 7px; 
+  }
 
 
   .div212, .div213, .div214, .div215, .div216, .div217, .div218, .div219{
@@ -174,8 +185,8 @@ p {
     text-align: center;
     padding: 2%;
     border: 2px solid #044dae;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 90px;
     border-radius: 50%;
     box-shadow: 0px 2px 3px #044dae;;
 }

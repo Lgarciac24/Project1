@@ -42,7 +42,7 @@ h1{
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -62,19 +62,24 @@ p {
 
   .h2text1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #044dae;
+    color: #636567;
     line-height: 0;
   }
 
-  .deactivated{
-    color: #949191;
-    font-size: 15px;
-    font-weight: 500;
-  }
+
 
   .h3text1, .ptext {
-      font-size: 16px;
-      color: #5b5b5b;
+      font-size: 14px;
+      color: #b6b6b6;
+  }
+
+  .activatedh2{
+    color: #044dae;
+    font-size: 20px;
+  }
+  .activatedh3 {
+    color: #382818;;
+    font-size: 15px;
   }
 
   .divfiguras{

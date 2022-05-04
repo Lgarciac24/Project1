@@ -156,7 +156,8 @@ div21.className = "column1"
             
                           if(!activa){  
                     
-                   
+                    h2text1.className = "activatedh2"
+                    h3text1.className = "activatedh3"
 
                     let h3subtitle = document.createElement("h3");
                     h3subtitle.innerText = "Bienvenido a tu primera clase. ¿Estás listo? 🤘";
@@ -229,6 +230,8 @@ div21.className = "column1"
                     activa = true
        
         }  else{
+            h2text1.className = "h2text1"
+            h3text1.className = "h3text1"
             activa = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
  
@@ -236,44 +239,6 @@ div21.className = "column1"
             
         }
 
-        if (activa = true){
-            h2text2.className = "deactivated"
-            h3text2.className = "deactivated"
-            h2text3.className = "deactivated"
-            h3text3.className = "deactivated"
-            h2text4.className = "deactivated"
-            h3text4.className = "deactivated"
-            h2text5.className = "deactivated"
-            h3text5.className = "deactivated"
-            h2text6.className = "deactivated"
-            h3text6.className = "deactivated"
-            h2text7.className = "deactivated"
-            h3text7.className = "deactivated"
-            h2text8.className = "deactivated"
-            h3text8.className = "deactivated"
-            h2text9.className = "deactivated"
-            h3text9.className = "deactivated"
-            
-            // textos = ""
-
-
-
-            // for (let i = 2; i <= 9; i++) {
-            //      console.log(i);
-
-            //      let textoacambiar = "h2text" + (i) + '.className = "deactivated"'
-
-            //      textos = textoacambiar 
-            //      console.log(textos)
-                
-            // }
-
-
-
-
-        } else {
-
-        }
        
         }
 // Clase 2
@@ -300,7 +265,9 @@ div21.className = "column1"
 
       h2text2.onclick = function (){
         if(!activa2){  
-        
+
+        h2text2.className = "activatedh2"
+        h3text2.className = "activatedh3"
     
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Segunda Clase! Vas muy bien 😊";
@@ -374,6 +341,8 @@ div21.className = "column1"
        
           }
           else{
+            h2text2.className = "h2text2"
+            h3text1.className = "h3text2"
             activa2 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
             
@@ -406,7 +375,8 @@ div21.className = "column1"
       h2text3.onclick = function (){
 
         if(!activa3){  
-        
+        h2text3.className = "activatedh2"
+        h3text3.className = "activatedh3"
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Tercera Clase! Keep going! 👊";
         h3subtitle.className = "h3subtitle"
@@ -500,6 +470,8 @@ div21.className = "column1"
           }
         
           else{
+            h2text3.className = "h2text1"
+            h3text3.className = "h3text1"
             activa3 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
  
@@ -535,6 +507,8 @@ div21.className = "column1"
       h2text4.onclick = function (){
 
         if(!activa4){  
+        h2text4.className = "activatedh2"
+        h3text4.className = "activatedh3"
         
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Cuarta clase!";
@@ -629,6 +603,8 @@ div21.className = "column1"
           }
         
           else{
+            h2text4.className = "h2text1"
+            h3text4.className = "h3text1"
             activa4 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -661,7 +637,8 @@ let activa5 = false;
   h2text5.onclick = function (){
 
     if(!activa5){  
-    
+    h2text5.className = "activatedh2"
+    h3text5.className = "activatedh3"
     let h3subtitle = document.createElement("h3");
     h3subtitle.innerText = "Quinta clase!";
     h3subtitle.className = "h3subtitle"
@@ -736,6 +713,8 @@ let activa5 = false;
       }
     
       else{
+        h2text5.className = "h2text1"
+        h3text5.className = "h3text1"
         activa5 = false
         divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -768,7 +747,8 @@ let activa5 = false;
       h2text6.onclick = function (){
     
         if(!activa6){  
-        
+            h2text6.className = "activatedh2"
+            h3text6.className = "activatedh3"
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Sexta clase!";
         h3subtitle.className = "h3subtitle"
@@ -843,6 +823,8 @@ let activa5 = false;
           }
         
           else{
+            h2text6.className = "h2text1"
+            h3text6.className = "h3text1"
             activa6 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
     
@@ -876,7 +858,8 @@ let div217 = document.createElement("div")
       h2text7.onclick = function (){
     
         if(!activa7){  
-        
+            h2text7.className = "activatedh2"
+            h3text7.className = "activatedh3"
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Séptima clase!";
         h3subtitle.className = "h3subtitle"
@@ -951,6 +934,8 @@ let div217 = document.createElement("div")
           }
         
           else{
+            h2text7.className = "h2text1"
+            h3text7.className = "h3text1"
             activa7 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
     
@@ -984,6 +969,8 @@ let activa8 = false;
 
     if(!activa8){  
     
+        h2text8.className = "activatedh2"
+        h3text8.className = "activatedh3"
     let h3subtitle = document.createElement("h3");
     h3subtitle.innerText = "Séptima clase!";
     h3subtitle.className = "h3subtitle"
@@ -1058,6 +1045,8 @@ let activa8 = false;
       }
     
       else{
+        h2text8.className = "h2text1"
+        h3text8.className = "h3text1"
         activa8 = false
         divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -1090,7 +1079,8 @@ let activa9 = false;
   h2text9.onclick = function (){
 
     if(!activa9){  
-    
+        h2text9.className = "activatedh2"
+        h3text9.className = "activatedh3"
     let h3subtitle = document.createElement("h3");
     h3subtitle.innerText = "Séptima clase!";
     h3subtitle.className = "h3subtitle"
@@ -1165,6 +1155,8 @@ let activa9 = false;
       }
     
       else{
+        h2text9.className = "h2text1"
+        h3text9.className = "h3text1"
         activa9 = false
         divagain = document.getElementById("div22vacio").innerHTML = "";
 

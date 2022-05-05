@@ -131,6 +131,17 @@ div21.className = "column1"
         divfiguras.appendChild(divcircle9)
 
 
+        let divline9 = document.createElement("div");
+        divline9.className = "line9"
+
+
+        let divcircle10 = document.createElement("div");
+        divcircle10.className = "circulo"
+
+        divfiguras.appendChild(divline9)
+        divfiguras.appendChild(divcircle10)
+
+
     // let div21path = document.createElement("div")
     // div21path.className ="div21path"
     // let pathline = document.createElement("svg")
@@ -158,6 +169,8 @@ div21.className = "column1"
                     
                     h2text1.className = "activatedh2"
                     h3text1.className = "activatedh3"
+
+                    divcircle1.className = "circulo1"
 
                     let h3subtitle = document.createElement("h3");
                     h3subtitle.innerText = "Bienvenido a tu primera clase. ¿Estás listo? 🤘";
@@ -268,6 +281,10 @@ div21.className = "column1"
 
         h2text2.className = "activatedh2"
         h3text2.className = "activatedh3"
+
+        divcircle1.className = "circulo1"
+        divline1.className = "lineblue"
+        divcircle2.className = "circulo1"
     
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Segunda Clase! Vas muy bien 😊";
@@ -341,8 +358,12 @@ div21.className = "column1"
        
           }
           else{
-            h2text2.className = "h2text2"
-            h3text1.className = "h3text2"
+            h2text2.className = "h2text1"
+            h3text2.className = "h3text1"
+            divcircle1.className = "circulo"
+            divline1.className = "line"
+            divcircle2.className = "circulo"
+
             activa2 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
             
@@ -375,8 +396,16 @@ div21.className = "column1"
       h2text3.onclick = function (){
 
         if(!activa3){  
+
         h2text3.className = "activatedh2"
         h3text3.className = "activatedh3"
+
+        divcircle1.className = "circulo1"
+        divline1.className = "lineblue"
+        divcircle2.className = "circulo1"
+        divline2.className = "lineblue2"
+        divcircle3.className = "circulo1"
+
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Tercera Clase! Keep going! 👊";
         h3subtitle.className = "h3subtitle"
@@ -470,8 +499,16 @@ div21.className = "column1"
           }
         
           else{
+    
             h2text3.className = "h2text1"
             h3text3.className = "h3text1"
+            divcircle1.className = "circulo"
+            divline1.className = "line"
+            divcircle2.className = "circulo"
+            divline2.className = "line2"
+            divcircle3.className = "circulo"
+
+
             activa3 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
  
@@ -510,6 +547,14 @@ div21.className = "column1"
         h2text4.className = "activatedh2"
         h3text4.className = "activatedh3"
         
+        divcircle1.className = "circulo1"
+        divline1.className = "lineblue"
+        divcircle2.className = "circulo1"
+        divline2.className = "lineblue2"
+        divcircle3.className = "circulo1"
+        divline3.className = "lineblue3"
+        divcircle4.className = "circulo1"
+
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Cuarta clase!";
         h3subtitle.className = "h3subtitle"
@@ -605,6 +650,14 @@ div21.className = "column1"
           else{
             h2text4.className = "h2text1"
             h3text4.className = "h3text1"
+            divcircle1.className = "circulo"
+            divline1.className = "line"
+            divcircle2.className = "circulo"
+            divline2.className = "line2"
+            divcircle3.className = "circulo"
+            divline3.className = "line3"
+            divcircle4.className = "circulo"
+
             activa4 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -639,6 +692,18 @@ let activa5 = false;
     if(!activa5){  
     h2text5.className = "activatedh2"
     h3text5.className = "activatedh3"
+
+    divcircle1.className = "circulo1"
+    divline1.className = "lineblue"
+    divcircle2.className = "circulo1"
+    divline2.className = "lineblue2"
+    divcircle3.className = "circulo1"
+    divline3.className = "lineblue3"
+    divcircle4.className = "circulo1"
+    divline4.className = "lineblue4"
+    divcircle5.className = "circulo1"
+
+
     let h3subtitle = document.createElement("h3");
     h3subtitle.innerText = "Quinta clase!";
     h3subtitle.className = "h3subtitle"
@@ -715,6 +780,18 @@ let activa5 = false;
       else{
         h2text5.className = "h2text1"
         h3text5.className = "h3text1"
+
+        divcircle1.className = "circulo"
+        divline1.className = "line"
+        divcircle2.className = "circulo"
+        divline2.className = "line2"
+        divcircle3.className = "circulo"
+        divline3.className = "line3"
+        divcircle4.className = "circulo"
+        divline4.className = "line4"
+        divcircle5.className = "circulo"
+
+
         activa5 = false
         divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -749,6 +826,20 @@ let activa5 = false;
         if(!activa6){  
             h2text6.className = "activatedh2"
             h3text6.className = "activatedh3"
+
+            divcircle1.className = "circulo1"
+            divline1.className = "lineblue"
+            divcircle2.className = "circulo1"
+            divline2.className = "lineblue2"
+            divcircle3.className = "circulo1"
+            divline3.className = "lineblue3"
+            divcircle4.className = "circulo1"
+            divline4.className = "lineblue4"
+            divcircle5.className = "circulo1"
+            divline5.className = "lineblue5"
+            divcircle6.className = "circulo1"
+
+
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Sexta clase!";
         h3subtitle.className = "h3subtitle"
@@ -825,6 +916,19 @@ let activa5 = false;
           else{
             h2text6.className = "h2text1"
             h3text6.className = "h3text1"
+
+            divcircle1.className = "circulo"
+            divline1.className = "line"
+            divcircle2.className = "circulo"
+            divline2.className = "line2"
+            divcircle3.className = "circulo"
+            divline3.className = "line3"
+            divcircle4.className = "circulo"
+            divline4.className = "line4"
+            divcircle5.className = "circulo"
+            divline5.className = "line5"
+            divcircle6.className = "circulo"
+            
             activa6 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
     
@@ -860,6 +964,22 @@ let div217 = document.createElement("div")
         if(!activa7){  
             h2text7.className = "activatedh2"
             h3text7.className = "activatedh3"
+
+            divcircle1.className = "circulo1"
+            divline1.className = "lineblue"
+            divcircle2.className = "circulo1"
+            divline2.className = "lineblue2"
+            divcircle3.className = "circulo1"
+            divline3.className = "lineblue3"
+            divcircle4.className = "circulo1"
+            divline4.className = "lineblue4"
+            divcircle5.className = "circulo1"
+            divline5.className = "lineblue5"
+            divcircle6.className = "circulo1"
+            divline6.className = "lineblue6"
+            divcircle7.className = "circulo1"
+
+
         let h3subtitle = document.createElement("h3");
         h3subtitle.innerText = "Séptima clase!";
         h3subtitle.className = "h3subtitle"
@@ -936,6 +1056,22 @@ let div217 = document.createElement("div")
           else{
             h2text7.className = "h2text1"
             h3text7.className = "h3text1"
+
+            divcircle1.className = "circulo"
+            divline1.className = "line"
+            divcircle2.className = "circulo"
+            divline2.className = "line2"
+            divcircle3.className = "circulo"
+            divline3.className = "line3"
+            divcircle4.className = "circulo"
+            divline4.className = "line4"
+            divcircle5.className = "circulo"
+            divline5.className = "line5"
+            divcircle6.className = "circulo"
+            divline6.className = "line6"
+            divcircle7.className = "circulo"
+
+
             activa7 = false
             divagain = document.getElementById("div22vacio").innerHTML = "";
     
@@ -971,6 +1107,24 @@ let activa8 = false;
     
         h2text8.className = "activatedh2"
         h3text8.className = "activatedh3"
+
+        divcircle1.className = "circulo1"
+        divline1.className = "lineblue"
+        divcircle2.className = "circulo1"
+        divline2.className = "lineblue2"
+        divcircle3.className = "circulo1"
+        divline3.className = "lineblue3"
+        divcircle4.className = "circulo1"
+        divline4.className = "lineblue4"
+        divcircle5.className = "circulo1"
+        divline5.className = "lineblue5"
+        divcircle6.className = "circulo1"
+        divline6.className = "lineblue6"
+        divcircle7.className = "circulo1"
+        divline7.className = "lineblue7"
+        divcircle8.className = "circulo1"
+
+
     let h3subtitle = document.createElement("h3");
     h3subtitle.innerText = "Séptima clase!";
     h3subtitle.className = "h3subtitle"
@@ -1047,6 +1201,24 @@ let activa8 = false;
       else{
         h2text8.className = "h2text1"
         h3text8.className = "h3text1"
+
+        divcircle1.className = "circulo"
+        divline1.className = "line"
+        divcircle2.className = "circulo"
+        divline2.className = "line2"
+        divcircle3.className = "circulo"
+        divline3.className = "line3"
+        divcircle4.className = "circulo"
+        divline4.className = "line4"
+        divcircle5.className = "circulo"
+        divline5.className = "line5"
+        divcircle6.className = "circulo"
+        divline6.className = "line6"
+        divcircle7.className = "circulo"
+        divline7.className = "line7"
+        divcircle8.className = "circulo"
+
+
         activa8 = false
         divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -1081,6 +1253,25 @@ let activa9 = false;
     if(!activa9){  
         h2text9.className = "activatedh2"
         h3text9.className = "activatedh3"
+
+        divcircle1.className = "circulo1"
+        divline1.className = "lineblue"
+        divcircle2.className = "circulo1"
+        divline2.className = "lineblue2"
+        divcircle3.className = "circulo1"
+        divline3.className = "lineblue3"
+        divcircle4.className = "circulo1"
+        divline4.className = "lineblue4"
+        divcircle5.className = "circulo1"
+        divline5.className = "lineblue5"
+        divcircle6.className = "circulo1"
+        divline6.className = "lineblue6"
+        divcircle7.className = "circulo1"
+        divline7.className = "lineblue7"
+        divcircle8.className = "circulo1"
+        divline8.className = "lineblue8"
+        divcircle9.className = "circulo1"
+
     let h3subtitle = document.createElement("h3");
     h3subtitle.innerText = "Séptima clase!";
     h3subtitle.className = "h3subtitle"
@@ -1157,6 +1348,26 @@ let activa9 = false;
       else{
         h2text9.className = "h2text1"
         h3text9.className = "h3text1"
+
+        divcircle1.className = "circulo"
+        divline1.className = "line"
+        divcircle2.className = "circulo"
+        divline2.className = "line2"
+        divcircle3.className = "circulo"
+        divline3.className = "line3"
+        divcircle4.className = "circulo"
+        divline4.className = "line4"
+        divcircle5.className = "circulo"
+        divline5.className = "line5"
+        divcircle6.className = "circulo"
+        divline6.className = "line6"
+        divcircle7.className = "circulo"
+        divline7.className = "line7"
+        divcircle8.className = "circulo"
+        divline8.className = "line8"
+        divcircle9.className = "circulo"
+
+
         activa9 = false
         divagain = document.getElementById("div22vacio").innerHTML = "";
 
@@ -1164,4 +1375,53 @@ let activa9 = false;
     
     }
     
+
+// Clase 10
+
+let div219mas1 = document.createElement("div")
+div219mas1.className = "div219mas1"
+
+div21.appendChild(div219mas1)
+
+
+let h2text9mas1 = document.createElement("h2")
+h2text9mas1.innerText = "Clase #10"
+h2text9mas1.className = "h2text9mas1"
+
+
+let h3text9mas1 = document.createElement("h3");
+h3text9mas1.innerText = "Proyecto 1"
+h3text9mas1.className = "h3text1"
+
+div219mas1.appendChild(h2text9mas1)
+div219mas1.appendChild(h3text9mas1)
+
+let alertadiv = document.createElement("div")
+    alertadiv.className = "alertadiv"
+    alertadiv.innerText = "hola"
+
+    let alerta = document.createElement("h3");
+    alerta.innerText = "Desbloquea este projecto cuando termines las clases de prerequisitos."
+    alerta.className = "alerta"
+
+    div219mas1.appendChild(alertadiv);
+    alertadiv.appendChild(alerta)
+
+// h2text9mas1.onmouseover = function (){
+
+//     let alertadiv = document.createElement("div")
+//     alertadiv.className = "alertadiv"
+
+//     let alerta = document.createElement("h3");
+//     alerta.innerText = "Desbloquea este projecto cuando termines las clases de prerequisitos."
+//     alerta.className = "alerta"
+
+//     div219mas1.appendChild(alertadiv);
+//     alertadiv.appendChild(alerta)
+// }
+
+// h2text9mas1.mouseout = function(){
+//     div219mas1 = ""
+//}
+
 

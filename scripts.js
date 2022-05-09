@@ -24,19 +24,19 @@ const data = [
     },
     {
         title: "Clase #2",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "Introducción a JavaScript",
+        mainTitle: "Segunda Clase! Vas muy bien 😊",
+        introText: "En esta clase comenzarás a programar con tu nuevo mejor amigo JavaScript. Aprenderás qué son funciones y cómo hacer que se ejecuten al hacer click en un botón. También aprenderás sobre los condicionales if/else. No te preocupes, you got this!",
+        homework: "Tarea: Crear una página con un CSS aceptable que tenga 10 botones y ejecute 10 funciones a partir de operaciones matemáticas.",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Funciones en JavaScript",
+                URL: "https://www.w3schools.com/js/js_functions.asp"
             },
             {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
+                title: "Información para la tarea",
+                URL: "https://www.tutorialstonight.com/js/js-function.php"
             }
 
         ]
@@ -46,19 +46,23 @@ const data = [
     },
     {
         title: "Clase #3",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "If/else & Loops",
+        mainTitle: "Tercera Clase! Keep going! 👊",
+        introText: "En esta clase continuaremos con JavaScript, usarás los FOR loops y además aprenderás los operadores ||,&&, % que te serán tan útiles de ahora en adelante.",
+        homework: "Tarea: Resolver los 30 ejercicios con IF/ELSE y FOR loops.",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Ejercicios if/else",
+                URL: "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
             },
             {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
+                title: "Ejercicios FOR",
+                URL: "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
+            },
+            {
+                title: "Ejercicios FOR II",
+                URL: "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
             }
 
         ]
@@ -68,21 +72,24 @@ const data = [
     },
     {
         title: "Clase #4",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "While Loops",
+        mainTitle: "Cuarta clase! 🧠",
+        introText: "En esta clase continuaremos con loops, pero en esta ocasión serán WHILE loops. Muy similar a los FOR loops. Además aprenderás typeOf datos de Javascript y otros datos muy útiles como parseInt, parseFloat y toString",
+        homework: "Tarea: Resolver los 30 ejercicios anteriores pero ahora con While loops.",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Ejercicios if/else",
+                URL: "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
             },
             {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
+                title: "Ejercicios FOR",
+                URL: "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
+            },
+            {
+                title: "Ejercicios FOR II",
+                URL: "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
             }
-
         ]
 
 
@@ -90,19 +97,19 @@ const data = [
     },
     {
         title: "Clase #5",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "Arrays",
+        mainTitle: "Quinta clase! 🖐",
+        introText: "Hoy verás los arrays o arreglos y cómo usarlos para guardar todo tipo de datos bajo una misma categoría.",
+        homework: "Tarea: Hacer un escrito explicándo 15 funciones de los arrays.",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Arrays",
+                URL: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
             },
             {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
+                title: "25 Métodos de Arrays en JavaScript",
+                URL: "https://dev.to/gdcodev/25-metodos-de-arrays-en-javascript-que-todo-desarrollador-debe-conocer-4a2d"
             }
 
         ]
@@ -112,19 +119,19 @@ const data = [
     },
     {
         title: "Clase #6",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "Objects",
+        mainTitle: "Esta es tu sexta clase! Ya has llegado a más de la mitad de tu journey! 🎓 ",
+        introText: "En esta clase verás objetos y sus propiedades, además empezarás a usar Local Storage y JSON.",
+        homework: "Tarea: Crear un formulario con al menos 8 preguntas que guarde la información del usuario en el Local Storage, y al mismo tiempo muestre todas las respuestas en la página. Recuerda que debe ser aesthetically pleasing!",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Objects",
+                URL: "https://www.w3schools.com/js/js_objects.asp"
             },
             {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
+                title: "Local Storage",
+                URL: "https://www.w3schools.com/jsref/prop_win_localstorage.asp"
             }
 
         ]
@@ -134,19 +141,19 @@ const data = [
     },
     {
         title: "Clase #7",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "API and Fetch",
+        mainTitle: "Séptima clase! 🧳 Cada vez más cerca!!",
+        introText: "En esta clase entrarás en el tema de los A.P.Is y la función Fetch para poder hacer uso de cualquier API.",
+        homework: "Tarea: A la pagina que creaste la clase anterior conéctale una API y pinta sus datos.",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Fetch",
+                URL: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
             },
             {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
+                title: "APIs",
+                URL: "https://aws.amazon.com/es/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses"
             }
 
         ]
@@ -156,20 +163,17 @@ const data = [
     },
     {
         title: "Clase #8",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "DOM",
+        mainTitle: "Clase Octava",
+        introText: "En esta clase aprenderás cómo crear y modificar datos del HTML desde javascript",
+        homework: "Tarea: Seguir trabajando en la página anterior evitando usar el HTML",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "JavaScript HTML DOM Elements (Nodes)",
+                URL: "https://www.w3schools.com/js/js_htmldom_nodes.asp"
             },
-            {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
-            }
+            
 
         ]
 
@@ -178,21 +182,17 @@ const data = [
     },
     {
         title: "Clase #9",
-        subtitle: "HTML & CSS",
-        mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
-        introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
-        homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+        subtitle: "GIT, GITHUB & Terminal",
+        mainTitle: "Ultima clase. Introduccion a Proyecto 1",
+        introText: "En esta clase verás cómo conectar tu laptop al terminal para registrar las modificaciones y que estén actualizadas en GITHUB",
+        homework: "Tarea: Empezar Proyecto 1.",
         activa:false,
         links: [
             {
-                title: "Lista de tags en HTML",
-                URL: "https://www.w3schools.com/tags/default.asp"
+                title: "Ejemplo - Mural",
+                URL: "https://app.guide.co/muralco/JW8VhFeS/Sebastian"
             },
-            {
-                title: "Duolingo",
-                URL: "https://www.duolingo.com/"
-            }
-
+        
         ]
 
 
@@ -234,70 +234,109 @@ let body = document.getElementById("body");
 
 // Creating the Div for the cointainer
 let container = document.createElement("div");
+
 // This is the class name for the container
 container.className = "container"
 
-// 
+// Creating the img tag for the logo
 let imgLogo = document.createElement("img")
+
+// Placing the logo
 imgLogo.src = "Image/logo.png";
+
+// Giving the logo image a class name for styles
 imgLogo.className = "imageLogo";
+
+// Adding or attaching the logo and the container we created above
 container.appendChild(imgLogo)
 body.appendChild(container)
 
+// This is for the main page title 
 let h1text = document.createElement("h1");
 h1text.innerText = "Hi " + studentInfo.name + " here's your progress!";
+
+// Adding the text to the container
 container.appendChild(h1text)
 
+// We are creating a div underneath the info below
 let div2 = document.createElement("div");
+
+// Class name of the div & Adding it to the body
 div2.className = "div2"
 body.appendChild(div2)
 
-
+// Creating a nested Div for the first column
 let div21 = document.createElement("div")
+
+// A class name for the div column 1
 div21.className = "column1"
 
+// Creating a nested Div inside the 1st column
 let div211 = document.createElement("div")
+
+// Class name for the div inside the 1st column
 div211.className = "div211"
+
+// Adding the column and the nested div
 div2.appendChild(div21)
 div21.appendChild(div211)
 
+// Creating a Div for the second column
 let div22 = document.createElement("div")
+
+// Class name for the second column
 div22.className = "column2"
+
+// Setting ID for the second column to be able to erase its center
 div22.setAttribute("id", "div22vacio")
 
-
+// Div-container for the circles and lines
 let divfiguras = document.createElement("div");
+
+// Class name for the div-container
 divfiguras.className = "divfiguras"
 
 
-
+// Loop to create the Class number and title
 for (let i = 0; i < data.length; i++) {
     const element = data[i];
 
+    // Creating a Div for each individual Class
+    let div2111 = document.createElement("div")
+    div2111.className = "div2111"
 
-
+    //Creating the Class Number
     let h2text1 = document.createElement("h2")
     h2text1.innerText = element.title
+    // Class number CSS-Class
     h2text1.className = "h2text1"
 
+    // Creating the Class title
     let h3text1 = document.createElement("h3");
-    h3text1.innerText = "HTML y CSS"
+    h3text1.innerText = element.subtitle
+    //Class title CSS-Class
     h3text1.className = "h3text1"
-    div211.appendChild(h2text1)
-    div211.appendChild(h3text1)
 
+    // Adding Div, then inside the Number and title 
+    div211.appendChild(div2111)
+    div2111.appendChild(h2text1)
+    div2111.appendChild(h3text1)
 
+    // Creating Div for the circles & class name
     let divcircle1 = document.createElement("div");
     divcircle1.className = "circulo"
 
+    // Creating Div for the lines & class name
     let divline1 = document.createElement("div");
     divline1.className = "line"
 
+    // Adding Div, circles and lines
     div2.appendChild(divfiguras)
     divfiguras.appendChild(divcircle1)
     divfiguras.appendChild(divline1)
 
 
+    // Function when clicked
     h2text1.onclick = function () {
 
 

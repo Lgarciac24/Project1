@@ -28,6 +28,9 @@ h1{
     color: #382818
 }
 
+.div2111 {
+  margin-bottom: 30px;
+}
 .column1 {
     float: left;
   width: 30%;
@@ -95,7 +98,7 @@ p {
       align-items: center;
       width: 20px;
       padding: 5px 0;
-      height: 481px;
+      /* height: 570px; */
   }
 
   .circulo {
@@ -113,16 +116,16 @@ p {
   }
 
 
-  .line, .line2, .line3, .line4, .line5, .line6, .line7,  .line8, .line9{
-    height: 62px; 
+  .line{
+    height: 42px; 
     background-color: #9e9e9e;
     width: 7px; 
   }
   
 
 
-  .lineblue, .lineblue2, .lineblue3, .lineblue4, .lineblue5, .lineblue6, .lineblue7, .lineblue8 {
-    height:62px; 
+  .lineblue {
+    height:42px; 
     background-color: #044dae;
     width: 7px; 
   }

@@ -14,7 +14,7 @@ fetch("http://localhost:3000/clases/qr_fiPm", {
     console.log(r)
 })
 
-
+create
 fetch("http://localhost:3000/clases", {
     method: "POST",
     headers: {
@@ -62,9 +62,9 @@ https://code.tutsplus.com/tutorials/quickly-build-a-php-crud-interface-with-the-
 
 
 Folder structure:
-
-student
-teacher
-api
+project1
+------student
+------teacher
+------api
 
 

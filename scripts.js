@@ -347,15 +347,25 @@ for (let i = 0; i < data.length; i++) {
 
             // Group activated links
             let listaActivateLinks = document.getElementsByClassName("activatedh2");
+            let listaActivateLinks2 = document.getElementsByClassName("activatedh3");
 
-            // Loop to create info about classes
+            // Loop to give unactive class h2
             for (let j = 0; j < listaActivateLinks.length; j++) {
                 const element = listaActivateLinks[j];
                 element.classList = "h2text1";
 
 
             }
-            // Loop for Active clase
+            // Loop to give unactive class h3
+            for (let z = 0; z < listaActivateLinks2.length; z++) {
+                const element = listaActivateLinks2[z];
+                element.classList = "h3text1";
+
+
+            }
+
+
+            // Loop for Active class
             for (let k = 0; k < data.length; k++) {
                 const element = data[k];
                 element.activa = false;
@@ -417,82 +427,68 @@ for (let i = 0; i < data.length; i++) {
             const elementlinks = element.links
             console.log(elementlinks)
 
-            // Adding nested div for button & CSS class
-            let div2241 = document.createElement("div")
-            div2241.className = "div2241"
-            div224.appendChild(div2241)
 
-            // Button loop for all URLs
-            for (let m = 0; m < elementlinks.length; m++) {
-                const elementurl = elementlinks[m].URL;
-                console.log(elementurl)
+
+            // Button loops
+            for (let l = 0; l < elementlinks.length; l++) {
+
+                // Adding nested div for button & CSS class
+                let div2241 = document.createElement("div")
+                div2241.className = "div2241"
+                div224.appendChild(div2241)
+
+
+                // Adding image icon & its class for styles
+                let imglist = document.createElement("img")
+                imglist.src = "Image/list-icon.png"
+                imglist.className = "imglist"
+                div2241.appendChild(imglist)
+
+
                 //Each time create an a tag
                 let a1 = document.createElement("a")
 
-                // Take the info from links as many times as its possible
-                a1.href = elementurl;
-                a1.target = "blank";
-                div2241.appendChild(a1)
-            }
+                // Look for the title of the button in data
 
-
-            // Adding image icon & its class for styles
-            let imglist = document.createElement("img")
-            imglist.src = "Image/list-icon.png"
-            imglist.className = "imglist"
-            div2241.appendChild(imglist)
-
-            // Loop for the title of the button
-
-
-            for (let n = 0; n < elementlinks.length; n++) {
-
-                const elementtitle = elementlinks[n].title;
+                const elementtitle = elementlinks[l].title;
                 console.log(elementtitle)
 
-            
+                // Create the text for a tag
+                let atext = document.createTextNode(elementtitle)
+
+                // Add the text to the a
+                a1.appendChild(atext);
+
+                // Set title & properties
+                a1.title = elementtitle;
+                a1.target = "blank";
+                a1.className = "textoButtons";
+
+
+                // Take the info from data
+                const elementurl = elementlinks[l].URL;
+
+                // Adding the URL info from data
+                a1.href = elementurl;
+
+                // Adding a tag to the body
+                div2241.appendChild(a1)
+
+
+
+
+
+
 
                 // Title of the button
-                ptextbuttons = document.createElement("p");
-                ptextbuttons.innerText = elementtitle;
-                ptextbuttons.className = "textoButtons";
+                // ptextbuttons = document.createElement("p");
+                // ptextbuttons.innerText = elementtitle;
+                // ptextbuttons.className = "textoButtons";
 
                 // Adding all to the body
-               
-                div2241.appendChild(ptextbuttons)
 
+                // div2241.appendChild(ptextbuttons)
             }
-
-
-
-
-
-
-
-            // Adding nested div for second button & CSS class
-            // let div2242 = document.createElement("div")
-            // div2242.className = "div2242"
-
-            // First button info
-            // let a2 = document.createElement("a")
-            // a2.href = element.links.URL
-            // a2.target = "blank"
-
-            // Adding image icon & its class for styles
-            // let homeworkimg = document.createElement("img")
-            // homeworkimg.src = "Image/homework-icon.png"
-            // homeworkimg.className = "homeworkimg"
-            // ptextbuttons2 = document.createElement("p")
-            // ptextbuttons2.innerText = element.links.title
-            // ptextbuttons2.className = "textoButtons"
-
-
-            // Adding all to the body
-            // div224.appendChild(div2242)
-            // div2242.appendChild(a2)
-            // a2.appendChild(homeworkimg)
-            // a2.appendChild(ptextbuttons2)
-
             element.activa = true
 
         } else {
@@ -501,7 +497,6 @@ for (let i = 0; i < data.length; i++) {
             element.activa = false
 
             div22.innerHTML = " "
-
         }
     }
 }

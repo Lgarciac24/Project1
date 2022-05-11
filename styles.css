@@ -15,8 +15,11 @@ html{
     
 }
 
+.container {
+  text-align: center;
+}
 .imageLogo {
-    width: 100px;
+    width: 30%;
 }
 
 .div1{
@@ -174,7 +177,9 @@ p {
     justify-content: center;
   }
 
-  .div2241, .div2242, .div2243{
+  .div2241{
+    display: grid;
+    align-content: center;
     text-align: center;
     padding: 2%;
     border: 2px solid #044dae;
@@ -186,6 +191,7 @@ p {
   
   .imglist, .homeworkimg {
       width: 30%;
+      justify-self: center;
   }
  
   .textoButtons {
@@ -208,4 +214,61 @@ p {
   .h2text9mas1:hover + .alertadiv {
     display:  block;
     color: red;
+  }
+
+  @media screen and (max-width: 487px) {
+    
+    h1 {
+      font-size: 18px;
+    }
+h2 {
+  font-size: 15px;
+}
+
+    .activatedh2 {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .h2text1 {
+      line-height: 1;
+    }
+.h3text1, .activatedh3 {
+  font-size: 11px;
+}
+
+.line {
+  height: 56px;
+}
+
+.h3subtitle {
+  font-size: 14px;
+}
+
+.column2{
+  width: 58%;
+}
+
+.ptext, p {
+  font-size: 12px;
+
+}
+
+.div224 {
+  display: grid;
+  justify-items: center;
+}
+
+.div2241 {
+  width: 47%;
+  margin-bottom: 5px;
+}
+h4 {
+  font-size: 13px;
+}
+
+.textoButtons {
+  font-size: 11px;
+
+}
   }

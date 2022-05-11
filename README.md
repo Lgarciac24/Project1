@@ -58,3 +58,13 @@ npx json-server --watch data.json
 see designs for reference:
 
 https://code.tutsplus.com/tutorials/quickly-build-a-php-crud-interface-with-the-pdo-advanced-crud-generator-tool--cms-32367
+
+
+
+Folder structure:
+
+student
+teacher
+api
+
+

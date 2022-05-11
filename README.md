@@ -1,6 +1,6 @@
 # Project1
 
-
+Assignment 2: Hints:
 EDITA
 fetch("http://localhost:3000/clases/qr_fiPm", {
     method: "PUT",
@@ -68,3 +68,4 @@ project1
 ------api
 
 
+You can use HTML normally along with the css.

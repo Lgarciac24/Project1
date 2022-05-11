@@ -5,7 +5,7 @@ const data = [
         mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
         introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
         homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Lista de tags en HTML",
@@ -17,7 +17,7 @@ const data = [
             }
 
         ],
-       
+
 
 
 
@@ -28,7 +28,7 @@ const data = [
         mainTitle: "Segunda Clase! Vas muy bien 😊",
         introText: "En esta clase comenzarás a programar con tu nuevo mejor amigo JavaScript. Aprenderás qué son funciones y cómo hacer que se ejecuten al hacer click en un botón. También aprenderás sobre los condicionales if/else. No te preocupes, you got this!",
         homework: "Tarea: Crear una página con un CSS aceptable que tenga 10 botones y ejecute 10 funciones a partir de operaciones matemáticas.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Funciones en JavaScript",
@@ -50,7 +50,7 @@ const data = [
         mainTitle: "Tercera Clase! Keep going! 👊",
         introText: "En esta clase continuaremos con JavaScript, usarás los FOR loops y además aprenderás los operadores ||,&&, % que te serán tan útiles de ahora en adelante.",
         homework: "Tarea: Resolver los 30 ejercicios con IF/ELSE y FOR loops.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Ejercicios if/else",
@@ -76,7 +76,7 @@ const data = [
         mainTitle: "Cuarta clase! 🧠",
         introText: "En esta clase continuaremos con loops, pero en esta ocasión serán WHILE loops. Muy similar a los FOR loops. Además aprenderás typeOf datos de Javascript y otros datos muy útiles como parseInt, parseFloat y toString",
         homework: "Tarea: Resolver los 30 ejercicios anteriores pero ahora con While loops.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Ejercicios if/else",
@@ -101,7 +101,7 @@ const data = [
         mainTitle: "Quinta clase! 🖐",
         introText: "Hoy verás los arrays o arreglos y cómo usarlos para guardar todo tipo de datos bajo una misma categoría.",
         homework: "Tarea: Hacer un escrito explicándo 15 funciones de los arrays.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Arrays",
@@ -123,7 +123,7 @@ const data = [
         mainTitle: "Esta es tu sexta clase! Ya has llegado a más de la mitad de tu journey! 🎓 ",
         introText: "En esta clase verás objetos y sus propiedades, además empezarás a usar Local Storage y JSON.",
         homework: "Tarea: Crear un formulario con al menos 8 preguntas que guarde la información del usuario en el Local Storage, y al mismo tiempo muestre todas las respuestas en la página. Recuerda que debe ser aesthetically pleasing!",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Objects",
@@ -145,7 +145,7 @@ const data = [
         mainTitle: "Séptima clase! 🧳 Cada vez más cerca!!",
         introText: "En esta clase entrarás en el tema de los A.P.Is y la función Fetch para poder hacer uso de cualquier API.",
         homework: "Tarea: A la pagina que creaste la clase anterior conéctale una API y pinta sus datos.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Fetch",
@@ -167,13 +167,13 @@ const data = [
         mainTitle: "Clase Octava",
         introText: "En esta clase aprenderás cómo crear y modificar datos del HTML desde javascript",
         homework: "Tarea: Seguir trabajando en la página anterior evitando usar el HTML",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "JavaScript HTML DOM Elements (Nodes)",
                 URL: "https://www.w3schools.com/js/js_htmldom_nodes.asp"
             },
-            
+
 
         ]
 
@@ -186,13 +186,13 @@ const data = [
         mainTitle: "Ultima clase. Introduccion a Proyecto 1",
         introText: "En esta clase verás cómo conectar tu laptop al terminal para registrar las modificaciones y que estén actualizadas en GITHUB",
         homework: "Tarea: Empezar Proyecto 1.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Ejemplo - Mural",
                 URL: "https://app.guide.co/muralco/JW8VhFeS/Sebastian"
             },
-        
+
         ]
 
 
@@ -204,7 +204,7 @@ const data = [
         mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
         introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
         homework: "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
-        activa:false,
+        activa: false,
         links: [
             {
                 title: "Lista de tags en HTML",
@@ -341,97 +341,157 @@ for (let i = 0; i < data.length; i++) {
 
 
         if (!element.activa) {
+
+            // Empty the Div
             div22.innerHTML = "";
 
-           let listaActivateLinks = document.getElementsByClassName("activatedh2");
+            // Group activated links
+            let listaActivateLinks = document.getElementsByClassName("activatedh2");
 
-           console.log(listaActivateLinks)
+            // Loop to create info about classes
+            for (let j = 0; j < listaActivateLinks.length; j++) {
+                const element = listaActivateLinks[j];
+                element.classList = "h2text1";
 
-           for (let j = 0; j < listaActivateLinks.length; j++) {
-               const element = listaActivateLinks[j];
-               element.classList = "h2text1";
 
-               
-           }
+            }
+            // Loop for Active clase
+            for (let k = 0; k < data.length; k++) {
+                const element = data[k];
+                element.activa = false;
 
-           for (let k = 0; k < data.length; k++) {
-               const element = data[k];
-               element.activa = false;
-               
-           }
+            }
 
+            // Giving a class for styles of active list
             h2text1.className = "activatedh2"
             h3text1.className = "activatedh3"
 
+            // Circle CSS-class
             divcircle1.className = "circulo1"
 
+            // Creating main title & its class
             let h3subtitle = document.createElement("h3");
-            h3subtitle.innerText = element.title;
+            h3subtitle.innerText = element.mainTitle;
             h3subtitle.className = "h3subtitle"
+
+            // Creating intro text
             let ptext = document.createElement("p")
-            ptext.innerText = " En esta clase aprenderás los conocimientos básicos de HTML y CSS";
+            ptext.innerText = element.introText;
             ptext.className = "ptext"
+
+            // Creating homework text
             let ptext2 = document.createElement("p")
-            ptext2.innerText = "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.";
+            ptext2.innerText = element.homework;
             ptext2.className = "ptext2"
+
+            // Adding Main title, intro text & homework to the column 2nd
             div22.appendChild(h3subtitle)
             div22.appendChild(ptext)
             div22.appendChild(ptext2)
             div2.appendChild(div22)
 
-
+            // Div for Links de interes & class name
             let div223 = document.createElement("div")
             div223.className = "div223";
 
+            // Creating Title & Class CSS
             let h4title = document.createElement("h4")
             h4title.innerText = "Enlaces de interés para esta clase:"
             h4title.className = "h4title"
 
+            // Adding links title to the body
             div22.appendChild(div223)
             div223.appendChild(h4title)
 
+            // Creating Div for the buttons & CSS Class
             let div224 = document.createElement("div")
             div224.className = "div224"
 
+            // Adding Div to the body
             div22.appendChild(div224)
 
+
+            // Button data
+
+
+            const elementlinks = element.links
+            console.log(elementlinks)
+
+            // Adding nested div for button & CSS class
             let div2241 = document.createElement("div")
             div2241.className = "div2241"
+            div224.appendChild(div2241)
 
-            let a1 = document.createElement("a")
-            a1.href = "https://www.w3schools.com/tags/default.asp"
-            a1.target = "blank"
+            // Button loop for all URLs
+            for (let m = 0; m < elementlinks.length; m++) {
+                const elementurl = elementlinks[m].URL;
+                console.log(elementurl)
+                //Each time create an a tag
+                let a1 = document.createElement("a")
+
+                // Take the info from links as many times as its possible
+                a1.href = elementurl;
+                a1.target = "blank";
+                div2241.appendChild(a1)
+            }
+
+
+            // Adding image icon & its class for styles
             let imglist = document.createElement("img")
             imglist.src = "Image/list-icon.png"
             imglist.className = "imglist"
-            ptextbuttons = document.createElement("p")
-            ptextbuttons.innerText = "Lista de tags en HTML"
-            ptextbuttons.className = "textoButtons"
+            div2241.appendChild(imglist)
 
-            div224.appendChild(div2241)
-            div2241.appendChild(a1)
-            a1.appendChild(imglist)
-            a1.appendChild(ptextbuttons)
-
-            let div2242 = document.createElement("div")
-            div2242.className = "div2242"
-
-            let a2 = document.createElement("a")
-            a2.href = "https://www.duolingo.com/"
-            a2.target = "blank"
-            let homeworkimg = document.createElement("img")
-            homeworkimg.src = "Image/homework-icon.png"
-            homeworkimg.className = "homeworkimg"
-            ptextbuttons2 = document.createElement("p")
-            ptextbuttons2.innerText = "Duolingo"
-            ptextbuttons2.className = "textoButtons"
+            // Loop for the title of the button
 
 
+            for (let n = 0; n < elementlinks.length; n++) {
 
-            div224.appendChild(div2242)
-            div2242.appendChild(a2)
-            a2.appendChild(homeworkimg)
-            a2.appendChild(ptextbuttons2)
+                const elementtitle = elementlinks[n].title;
+                console.log(elementtitle)
+
+            
+
+                // Title of the button
+                ptextbuttons = document.createElement("p");
+                ptextbuttons.innerText = elementtitle;
+                ptextbuttons.className = "textoButtons";
+
+                // Adding all to the body
+               
+                div2241.appendChild(ptextbuttons)
+
+            }
+
+
+
+
+
+
+
+            // Adding nested div for second button & CSS class
+            // let div2242 = document.createElement("div")
+            // div2242.className = "div2242"
+
+            // First button info
+            // let a2 = document.createElement("a")
+            // a2.href = element.links.URL
+            // a2.target = "blank"
+
+            // Adding image icon & its class for styles
+            // let homeworkimg = document.createElement("img")
+            // homeworkimg.src = "Image/homework-icon.png"
+            // homeworkimg.className = "homeworkimg"
+            // ptextbuttons2 = document.createElement("p")
+            // ptextbuttons2.innerText = element.links.title
+            // ptextbuttons2.className = "textoButtons"
+
+
+            // Adding all to the body
+            // div224.appendChild(div2242)
+            // div2242.appendChild(a2)
+            // a2.appendChild(homeworkimg)
+            // a2.appendChild(ptextbuttons2)
 
             element.activa = true
 
@@ -439,18 +499,18 @@ for (let i = 0; i < data.length; i++) {
             h2text1.className = "h2text1"
             h3text1.className = "h3text1"
             element.activa = false
-           
+
             div22.innerHTML = " "
 
-
         }
-
-
     }
 }
-        /*
+
+
+
+/*
 // Clase 2
-       
+ 
 let div212 = document.createElement("div")
 div212.className = "div212"
 
@@ -514,15 +574,15 @@ div22.appendChild(div224)
 let div2241 = document.createElement("div")
 div2241.className = "div2241"
  
-    let a1 = document.createElement("a")
-    a1.href= "https://www.w3schools.com/js/js_functions.asp"
-    a1.target = "blank"
-    let imglist = document.createElement("img")
-    imglist.src = "Image/list-icon.png"
-    imglist.className = "imglist"
-    ptextbuttons = document.createElement("p")
-    ptextbuttons.innerText = "Funciones en JavaScript"
-    ptextbuttons.className = "textoButtons"
+let a1 = document.createElement("a")
+a1.href= "https://www.w3schools.com/js/js_functions.asp"
+a1.target = "blank"
+let imglist = document.createElement("img")
+imglist.src = "Image/list-icon.png"
+imglist.className = "imglist"
+ptextbuttons = document.createElement("p")
+ptextbuttons.innerText = "Funciones en JavaScript"
+ptextbuttons.className = "textoButtons"
  
 div224.appendChild(div2241)
 div2241.appendChild(a1)
@@ -532,15 +592,15 @@ a1.appendChild(ptextbuttons)
 let div2242 = document.createElement("div")
 div2242.className = "div2242"
  
-    let a2 = document.createElement("a")
-    a2.href = "https://www.tutorialstonight.com/js/js-function.php"
-    a2.target = "blank"
-    let homeworkimg = document.createElement("img")
-    homeworkimg.src = "Image/homework-icon.png"
-    homeworkimg.className = "homeworkimg"
-    ptextbuttons2 = document.createElement("p")
-    ptextbuttons2.innerText = "Información para la tarea"
-    ptextbuttons2.className = "textoButtons"
+let a2 = document.createElement("a")
+a2.href = "https://www.tutorialstonight.com/js/js-function.php"
+a2.target = "blank"
+let homeworkimg = document.createElement("img")
+homeworkimg.src = "Image/homework-icon.png"
+homeworkimg.className = "homeworkimg"
+ptextbuttons2 = document.createElement("p")
+ptextbuttons2.innerText = "Información para la tarea"
+ptextbuttons2.className = "textoButtons"
  
  
  
@@ -551,17 +611,17 @@ a2.appendChild(ptextbuttons2)
 
 activa2 = true;
  
-  }
-  else{
-    h2text2.className = "h2text1"
-    h3text2.className = "h3text1"
-    divcircle1.className = "circulo"
-    divline1.className = "line"
-    divcircle2.className = "circulo"
+}
+else{
+h2text2.className = "h2text1"
+h3text2.className = "h3text1"
+divcircle1.className = "circulo"
+divline1.className = "line"
+divcircle2.className = "circulo"
 
-    activa2 = false
-    divagain = document.getElementById("div22vacio").innerHTML = "";
-    
+activa2 = false
+divagain = document.getElementById("div22vacio").innerHTML = "";
+ 
 }
 }
 
@@ -634,15 +694,15 @@ div22.appendChild(div224)
 let div2241 = document.createElement("div")
 div2241.className = "div2241"
  
-    let a1 = document.createElement("a")
-    a1.href= "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
-    a1.target = "blank"
-    let imglist = document.createElement("img")
-    imglist.src = "Image/homework-icon.png"
-    imglist.className = "imglist"
-    ptextbuttons = document.createElement("p")
-    ptextbuttons.innerText = "Ejercicios if/else"
-    ptextbuttons.className = "textoButtons"
+let a1 = document.createElement("a")
+a1.href= "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
+a1.target = "blank"
+let imglist = document.createElement("img")
+imglist.src = "Image/homework-icon.png"
+imglist.className = "imglist"
+ptextbuttons = document.createElement("p")
+ptextbuttons.innerText = "Ejercicios if/else"
+ptextbuttons.className = "textoButtons"
  
 div224.appendChild(div2241)
 div2241.appendChild(a1)
@@ -652,15 +712,15 @@ a1.appendChild(ptextbuttons)
 let div2242 = document.createElement("div")
 div2242.className = "div2242"
  
-    let a2 = document.createElement("a")
-    a2.href = "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
-    a2.target = "blank"
-    let homeworkimg1 = document.createElement("img")
-    homeworkimg1.src = "Image/homework-icon.png"
-    homeworkimg1.className = "homeworkimg"
-    ptextbuttons2 = document.createElement("p")
-    ptextbuttons2.innerText = "Ejercicios FOR"
-    ptextbuttons2.className = "textoButtons"
+let a2 = document.createElement("a")
+a2.href = "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
+a2.target = "blank"
+let homeworkimg1 = document.createElement("img")
+homeworkimg1.src = "Image/homework-icon.png"
+homeworkimg1.className = "homeworkimg"
+ptextbuttons2 = document.createElement("p")
+ptextbuttons2.innerText = "Ejercicios FOR"
+ptextbuttons2.className = "textoButtons"
  
  
  
@@ -672,15 +732,15 @@ a2.appendChild(ptextbuttons2)
 let div2243 = document.createElement("div")
 div2243.className = "div2243"
  
-    let a3 = document.createElement("a")
-    a3.href = "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
-    a3.target = "blank"
-    let homeworkimg2 = document.createElement("img")
-    homeworkimg2.src = "Image/homework-icon.png"
-    homeworkimg2.className = "homeworkimg"
-    ptextbuttons3 = document.createElement("p")
-    ptextbuttons3.innerText = "Ejercicios FOR II"
-    ptextbuttons3.className = "textoButtons"
+let a3 = document.createElement("a")
+a3.href = "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
+a3.target = "blank"
+let homeworkimg2 = document.createElement("img")
+homeworkimg2.src = "Image/homework-icon.png"
+homeworkimg2.className = "homeworkimg"
+ptextbuttons3 = document.createElement("p")
+ptextbuttons3.innerText = "Ejercicios FOR II"
+ptextbuttons3.className = "textoButtons"
  
  
  
@@ -691,31 +751,31 @@ a3.appendChild(ptextbuttons3)
 
 activa3 = true;
 // necesito que esto suceda solo una vez, 
-  }
+}
  
-  else{
+else{
  
-    h2text3.className = "h2text1"
-    h3text3.className = "h3text1"
-    divcircle1.className = "circulo"
-    divline1.className = "line"
-    divcircle2.className = "circulo"
-    divline2.className = "line2"
-    divcircle3.className = "circulo"
+h2text3.className = "h2text1"
+h3text3.className = "h3text1"
+divcircle1.className = "circulo"
+divline1.className = "line"
+divcircle2.className = "circulo"
+divline2.className = "line2"
+divcircle3.className = "circulo"
 
 
-    activa3 = false
-    divagain = document.getElementById("div22vacio").innerHTML = "";
+activa3 = false
+divagain = document.getElementById("div22vacio").innerHTML = "";
  
 
-    
+ 
 }
  
 }
 
 
 //Clase 4
-  
+ 
 let div214 = document.createElement("div")
 div214.className = "div214"
 
@@ -783,15 +843,15 @@ div22.appendChild(div224)
 let div2241 = document.createElement("div")
 div2241.className = "div2241"
  
-    let a1 = document.createElement("a")
-    a1.href= "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
-    a1.target = "blank"
-    let imglist = document.createElement("img")
-    imglist.src = "Image/homework-icon.png"
-    imglist.className = "imglist"
-    ptextbuttons = document.createElement("p")
-    ptextbuttons.innerText = "Ejercicios if/else"
-    ptextbuttons.className = "textoButtons"
+let a1 = document.createElement("a")
+a1.href= "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-decision-python.html"
+a1.target = "blank"
+let imglist = document.createElement("img")
+imglist.src = "Image/homework-icon.png"
+imglist.className = "imglist"
+ptextbuttons = document.createElement("p")
+ptextbuttons.innerText = "Ejercicios if/else"
+ptextbuttons.className = "textoButtons"
  
 div224.appendChild(div2241)
 div2241.appendChild(a1)
@@ -801,15 +861,15 @@ a1.appendChild(ptextbuttons)
 let div2242 = document.createElement("div")
 div2242.className = "div2242"
  
-    let a2 = document.createElement("a")
-    a2.href = "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
-    a2.target = "blank"
-    let homeworkimg1 = document.createElement("img")
-    homeworkimg1.src = "Image/homework-icon.png"
-    homeworkimg1.className = "homeworkimg"
-    ptextbuttons2 = document.createElement("p")
-    ptextbuttons2.innerText = "Ejercicios FOR"
-    ptextbuttons2.className = "textoButtons"
+let a2 = document.createElement("a")
+a2.href = "http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclefor-python.html"
+a2.target = "blank"
+let homeworkimg1 = document.createElement("img")
+homeworkimg1.src = "Image/homework-icon.png"
+homeworkimg1.className = "homeworkimg"
+ptextbuttons2 = document.createElement("p")
+ptextbuttons2.innerText = "Ejercicios FOR"
+ptextbuttons2.className = "textoButtons"
  
  
  
@@ -821,15 +881,15 @@ a2.appendChild(ptextbuttons2)
 let div2243 = document.createElement("div")
 div2243.className = "div2243"
  
-    let a3 = document.createElement("a")
-    a3.href = "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
-    a3.target = "blank"
-    let homeworkimg2 = document.createElement("img")
-    homeworkimg2.src = "Image/homework-icon.png"
-    homeworkimg2.className = "homeworkimg"
-    ptextbuttons3 = document.createElement("p")
-    ptextbuttons3.innerText = "Ejercicios FOR II"
-    ptextbuttons3.className = "textoButtons"
+let a3 = document.createElement("a")
+a3.href = "https://www.mclibre.org/consultar/python/ejercicios/ej-for-1.html"
+a3.target = "blank"
+let homeworkimg2 = document.createElement("img")
+homeworkimg2.src = "Image/homework-icon.png"
+homeworkimg2.className = "homeworkimg"
+ptextbuttons3 = document.createElement("p")
+ptextbuttons3.innerText = "Ejercicios FOR II"
+ptextbuttons3.className = "textoButtons"
  
  
  
@@ -840,26 +900,26 @@ a3.appendChild(ptextbuttons3)
 
 activa4 = true;
  
-  }
+}
  
-  else{
-    h2text4.className = "h2text1"
-    h3text4.className = "h3text1"
-    divcircle1.className = "circulo"
-    divline1.className = "line"
-    divcircle2.className = "circulo"
-    divline2.className = "line2"
-    divcircle3.className = "circulo"
-    divline3.className = "line3"
-    divcircle4.className = "circulo"
+else{
+h2text4.className = "h2text1"
+h3text4.className = "h3text1"
+divcircle1.className = "circulo"
+divline1.className = "line"
+divcircle2.className = "circulo"
+divline2.className = "line2"
+divcircle3.className = "circulo"
+divline3.className = "line3"
+divcircle4.className = "circulo"
 
-    activa4 = false
-    divagain = document.getElementById("div22vacio").innerHTML = "";
+activa4 = false
+divagain = document.getElementById("div22vacio").innerHTML = "";
 
 }
  
 }
-  
+ 
 //Clase 5 
 
 let div215 = document.createElement("div")
@@ -1019,20 +1079,20 @@ let activa6 = false;
 h2text6.onclick = function (){
  
 if(!activa6){  
-    h2text6.className = "activatedh2"
-    h3text6.className = "activatedh3"
+h2text6.className = "activatedh2"
+h3text6.className = "activatedh3"
 
-    divcircle1.className = "circulo1"
-    divline1.className = "lineblue"
-    divcircle2.className = "circulo1"
-    divline2.className = "lineblue2"
-    divcircle3.className = "circulo1"
-    divline3.className = "lineblue3"
-    divcircle4.className = "circulo1"
-    divline4.className = "lineblue4"
-    divcircle5.className = "circulo1"
-    divline5.className = "lineblue5"
-    divcircle6.className = "circulo1"
+divcircle1.className = "circulo1"
+divline1.className = "lineblue"
+divcircle2.className = "circulo1"
+divline2.className = "lineblue2"
+divcircle3.className = "circulo1"
+divline3.className = "lineblue3"
+divcircle4.className = "circulo1"
+divline4.className = "lineblue4"
+divcircle5.className = "circulo1"
+divline5.className = "lineblue5"
+divcircle6.className = "circulo1"
 
 
 let h3subtitle = document.createElement("h3");
@@ -1068,15 +1128,15 @@ div22.appendChild(div224)
 let div2241 = document.createElement("div")
 div2241.className = "div2241"
  
-    let a1 = document.createElement("a")
-    a1.href= "https://www.w3schools.com/js/js_objects.asp"
-    a1.target = "blank"
-    let imglist = document.createElement("img")
-    imglist.src = "Image/list-icon.png"
-    imglist.className = "imglist"
-    ptextbuttons = document.createElement("p")
-    ptextbuttons.innerText = "Objects"
-    ptextbuttons.className = "textoButtons"
+let a1 = document.createElement("a")
+a1.href= "https://www.w3schools.com/js/js_objects.asp"
+a1.target = "blank"
+let imglist = document.createElement("img")
+imglist.src = "Image/list-icon.png"
+imglist.className = "imglist"
+ptextbuttons = document.createElement("p")
+ptextbuttons.innerText = "Objects"
+ptextbuttons.className = "textoButtons"
  
 div224.appendChild(div2241)
 div2241.appendChild(a1)
@@ -1086,15 +1146,15 @@ a1.appendChild(ptextbuttons)
 let div2242 = document.createElement("div")
 div2242.className = "div2242"
  
-    let a2 = document.createElement("a")
-    a2.href = "https://www.w3schools.com/jsref/prop_win_localstorage.asp"
-    a2.target = "blank"
-    let homeworkimg1 = document.createElement("img")
-    homeworkimg1.src = "Image/list-icon.png"
-    homeworkimg1.className = "imglist"
-    ptextbuttons2 = document.createElement("p")
-    ptextbuttons2.innerText = "Local Storage"
-    ptextbuttons2.className = "textoButtons"
+let a2 = document.createElement("a")
+a2.href = "https://www.w3schools.com/jsref/prop_win_localstorage.asp"
+a2.target = "blank"
+let homeworkimg1 = document.createElement("img")
+homeworkimg1.src = "Image/list-icon.png"
+homeworkimg1.className = "imglist"
+ptextbuttons2 = document.createElement("p")
+ptextbuttons2.innerText = "Local Storage"
+ptextbuttons2.className = "textoButtons"
  
  
  
@@ -1106,31 +1166,31 @@ a2.appendChild(ptextbuttons2)
  
 activa6 = true;
  
-  }
+}
  
-  else{
-    h2text6.className = "h2text1"
-    h3text6.className = "h3text1"
+else{
+h2text6.className = "h2text1"
+h3text6.className = "h3text1"
 
-    divcircle1.className = "circulo"
-    divline1.className = "line"
-    divcircle2.className = "circulo"
-    divline2.className = "line2"
-    divcircle3.className = "circulo"
-    divline3.className = "line3"
-    divcircle4.className = "circulo"
-    divline4.className = "line4"
-    divcircle5.className = "circulo"
-    divline5.className = "line5"
-    divcircle6.className = "circulo"
-    
-    activa6 = false
-    divagain = document.getElementById("div22vacio").innerHTML = "";
+divcircle1.className = "circulo"
+divline1.className = "line"
+divcircle2.className = "circulo"
+divline2.className = "line2"
+divcircle3.className = "circulo"
+divline3.className = "line3"
+divcircle4.className = "circulo"
+divline4.className = "line4"
+divcircle5.className = "circulo"
+divline5.className = "line5"
+divcircle6.className = "circulo"
+ 
+activa6 = false
+divagain = document.getElementById("div22vacio").innerHTML = "";
  
 }
  
 }
-  
+ 
 
 // Clase 7
 
@@ -1157,22 +1217,22 @@ let activa7 = false;
 h2text7.onclick = function (){
  
 if(!activa7){  
-    h2text7.className = "activatedh2"
-    h3text7.className = "activatedh3"
+h2text7.className = "activatedh2"
+h3text7.className = "activatedh3"
 
-    divcircle1.className = "circulo1"
-    divline1.className = "lineblue"
-    divcircle2.className = "circulo1"
-    divline2.className = "lineblue2"
-    divcircle3.className = "circulo1"
-    divline3.className = "lineblue3"
-    divcircle4.className = "circulo1"
-    divline4.className = "lineblue4"
-    divcircle5.className = "circulo1"
-    divline5.className = "lineblue5"
-    divcircle6.className = "circulo1"
-    divline6.className = "lineblue6"
-    divcircle7.className = "circulo1"
+divcircle1.className = "circulo1"
+divline1.className = "lineblue"
+divcircle2.className = "circulo1"
+divline2.className = "lineblue2"
+divcircle3.className = "circulo1"
+divline3.className = "lineblue3"
+divcircle4.className = "circulo1"
+divline4.className = "lineblue4"
+divcircle5.className = "circulo1"
+divline5.className = "lineblue5"
+divcircle6.className = "circulo1"
+divline6.className = "lineblue6"
+divcircle7.className = "circulo1"
 
 
 let h3subtitle = document.createElement("h3");
@@ -1208,15 +1268,15 @@ div22.appendChild(div224)
 let div2241 = document.createElement("div")
 div2241.className = "div2241"
  
-    let a1 = document.createElement("a")
-    a1.href= "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
-    a1.target = "blank"
-    let imglist = document.createElement("img")
-    imglist.src = "Image/list-icon.png"
-    imglist.className = "imglist"
-    ptextbuttons = document.createElement("p")
-    ptextbuttons.innerText = "Fetch"
-    ptextbuttons.className = "textoButtons"
+let a1 = document.createElement("a")
+a1.href= "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+a1.target = "blank"
+let imglist = document.createElement("img")
+imglist.src = "Image/list-icon.png"
+imglist.className = "imglist"
+ptextbuttons = document.createElement("p")
+ptextbuttons.innerText = "Fetch"
+ptextbuttons.className = "textoButtons"
  
 div224.appendChild(div2241)
 div2241.appendChild(a1)
@@ -1226,15 +1286,15 @@ a1.appendChild(ptextbuttons)
 let div2242 = document.createElement("div")
 div2242.className = "div2242"
  
-    let a2 = document.createElement("a")
-    a2.href = "https://aws.amazon.com/es/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses"
-    a2.target = "blank"
-    let homeworkimg1 = document.createElement("img")
-    homeworkimg1.src = "Image/list-icon.png"
-    homeworkimg1.className = "imglist"
-    ptextbuttons2 = document.createElement("p")
-    ptextbuttons2.innerText = "APIs"
-    ptextbuttons2.className = "textoButtons"
+let a2 = document.createElement("a")
+a2.href = "https://aws.amazon.com/es/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses"
+a2.target = "blank"
+let homeworkimg1 = document.createElement("img")
+homeworkimg1.src = "Image/list-icon.png"
+homeworkimg1.className = "imglist"
+ptextbuttons2 = document.createElement("p")
+ptextbuttons2.innerText = "APIs"
+ptextbuttons2.className = "textoButtons"
  
  
  
@@ -1246,29 +1306,29 @@ a2.appendChild(ptextbuttons2)
  
 activa7 = true;
  
-  }
+}
  
-  else{
-    h2text7.className = "h2text1"
-    h3text7.className = "h3text1"
+else{
+h2text7.className = "h2text1"
+h3text7.className = "h3text1"
 
-    divcircle1.className = "circulo"
-    divline1.className = "line"
-    divcircle2.className = "circulo"
-    divline2.className = "line2"
-    divcircle3.className = "circulo"
-    divline3.className = "line3"
-    divcircle4.className = "circulo"
-    divline4.className = "line4"
-    divcircle5.className = "circulo"
-    divline5.className = "line5"
-    divcircle6.className = "circulo"
-    divline6.className = "line6"
-    divcircle7.className = "circulo"
+divcircle1.className = "circulo"
+divline1.className = "line"
+divcircle2.className = "circulo"
+divline2.className = "line2"
+divcircle3.className = "circulo"
+divline3.className = "line3"
+divcircle4.className = "circulo"
+divline4.className = "line4"
+divcircle5.className = "circulo"
+divline5.className = "line5"
+divcircle6.className = "circulo"
+divline6.className = "line6"
+divcircle7.className = "circulo"
 
 
-    activa7 = false
-    divagain = document.getElementById("div22vacio").innerHTML = "";
+activa7 = false
+divagain = document.getElementById("div22vacio").innerHTML = "";
  
 }
  

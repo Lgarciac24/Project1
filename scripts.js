@@ -1,6 +1,6 @@
 const data = [
     {
-        title: "Clase Numero 1",
+        title: "Clase #1",
         subtitle: "HTML & CSS",
         mainTitle: "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
         introText: "En esta clase aprenderás los conocimientos básicos de HTML y CSS",

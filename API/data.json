@@ -1,0 +1,28 @@
+{
+    "clases": [
+        {
+            "title": "Clase #1",
+            "subtitle": "HTML & CSS",
+            "mainTitle": "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
+            "introText": "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
+            "homework": "Tarea: duplicar la página de Duolingo con todos los conocimientos adquiridos en esta clase.",
+            "activa": false,
+            "links": [
+                {
+                    "title": "Lista de tags en HTML",
+                    "URL": "https://www.w3schools.com/tags/default.asp"
+                },
+                {
+                    "title": "Duolingo",
+                    "URL": "https://www.duolingo.com/"
+                }
+
+            ],
+            "given": true
+        }
+    ],
+    "users": []
+
+
+}
+

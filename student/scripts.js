@@ -1,3 +1,8 @@
+/* LEER, CREAR, ACTUALIZAR, BORRAR clases y estudiantes */
+// 
+
+
+
 const data = [
     {
         title: "Clase #1",
@@ -233,9 +238,14 @@ const data = [
 
 ];
 
-const studentInfo = {
+const studentInfo = [{
     name: "Lorena",
-}
+    given: [1,2,3]},
+    {
+        name: "Yilmar",
+        given: [1]
+    }
+]
 
 
 

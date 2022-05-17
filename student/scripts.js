@@ -248,13 +248,12 @@
 // ]
 
 fetch('http://localhost:3000/clases', {
-   
 
 })
 .then(response => response.json())
 .then(data => {
-    debugger
-})
+    console.log(data)
+
 
 // We are getting the body
 let body = document.getElementById("body");
@@ -280,7 +279,7 @@ body.appendChild(container)
 
 // This is for the main page title 
 let h1text = document.createElement("h1");
-h1text.innerText = "Hi " + studentInfo.name + " here's your progress!";
+h1text.innerText = "Hi  here's your progress!";
 
 // Adding the text to the container
 container.appendChild(h1text)
@@ -522,3 +521,5 @@ for (let i = 0; i < data.length; i++) {
         }
     }
 }
+
+})

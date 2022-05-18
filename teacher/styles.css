@@ -22,7 +22,7 @@ body{
     align-items: center;
 }   
 
-.tabla{
+#tabla{
     width: 95%;
   
     margin: 0 auto;
@@ -68,4 +68,8 @@ p {
 }
 #info {
     padding: 2px 10px;
+}
+
+#formulario {
+    display: none;
 }

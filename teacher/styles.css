@@ -16,6 +16,11 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+.regclass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
 
 .tabla{
     width: 95%;
@@ -61,6 +66,6 @@ h4 {
 p {
     font-size: 12px;
 }
-.info {
+#info {
     padding: 2px 10px;
 }

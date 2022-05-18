@@ -201,9 +201,15 @@
         {
             "name": "Lorena",
             "email": "lgarciac24@gmail.com",
-            "sessionsGiven":[
-                
-            ]
+            "id": 1,
+            "sessionsGiven": 3
+            
+        },
+        {
+            "name": "Yilmar",
+            "email": "yilmar@gmail.com",
+            "id" : 2,
+            "sessionsGiven": 2
             
         }
 

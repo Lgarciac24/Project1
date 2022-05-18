@@ -252,7 +252,7 @@ fetch('http://localhost:3000/clases', {
 })
 .then(response => response.json())
 .then(data => {
-    console.log(data)
+    // console.log(data)
 
 
 // We are getting the body
@@ -277,9 +277,18 @@ imgLogo.className = "imageLogo";
 container.appendChild(imgLogo)
 body.appendChild(container)
 
+
+fetch('http://localhost:3000/users', {
+
+})
+.then(res => res.json())
+.then(datauser => {
+    // console.log(datauser)
+
 // This is for the main page title 
 let h1text = document.createElement("h1");
-h1text.innerText = "Hi  here's your progress!";
+h1text.innerText = "Hi " + datauser[0].name + " here's your progress!";
+
 
 // Adding the text to the container
 container.appendChild(h1text)
@@ -357,6 +366,7 @@ for (let i = 0; i < data.length; i++) {
     let divline1 = document.createElement("div");
     divline1.className = "line"
 
+    // Conditional. How many classes were given
     if (element.given === true) {
         if (data[i + 1].given === false) {
             divcircle1.className = "circulo1";
@@ -372,6 +382,15 @@ for (let i = 0; i < data.length; i++) {
     div2.appendChild(divfiguras)
     divfiguras.appendChild(divcircle1)
     divfiguras.appendChild(divline1)
+
+    // Sessions given number for false/true statement -- HELP
+
+    // if (datauser[0].sessionsGiven ) {
+    //     sessionsGiven === 
+    // } else {
+        
+    // }
+
 
     // Function when clicked
     h2text1.onclick = function () {
@@ -522,4 +541,5 @@ for (let i = 0; i < data.length; i++) {
     }
 }
 
+})
 })

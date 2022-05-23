@@ -3,29 +3,55 @@ fetch('http://localhost:3000/users', {
 
 })
     .then(response => response.json())
-    .then(data => {
-        console.log(data)
-
+    .then(data  => {
        
-       //Adding New Student
+            // Getting the div
+            let newStudent = document.getElementById("myNewStudent");
 
-       let addNewStudent = document.getElementById("addNewStudent");
-       addNewStudent.onclick = function()  {
-           
-            let tabla = document.getElementById("tabla");
-            tabla.style.display = "none";
-            formulario.style.display = "block";
+            // Getting the button to the form
+            let addNewStudent = document.getElementById("addNewStudent")
 
 
+            // Getting the X that closes form
+            let span = document.getElementsByClassName("close")[0];
 
-
-            let cerrar = document.getElementById("cerrar");
-            cerrar.onclick = function () {
-                tabla.style.display = "block";
-                formulario.style.display = "none";
+            // Function for the button
+            addNewStudent.onclick = function () {
+                newStudent.style.display = "block";
+                
             }
-       }
-       
+
+            //Funtion for the X 
+            span.onclick = function () {
+                newStudent.style.display = "none";
+              
+                
+            }
+
+            // To close window
+            window.onclick = function(event) {
+                if (event.target == newStudent) {
+                  newStudent.style.display = "none";
+                }
+              }
+
+            // When Submit it's clicked
+            let submitNew = document.getElementById("submitNew");
+
+            submitNew.onclick = function () {
+                fetch("http://localhost:3000/users", {
+                method: "POST",
+                headers: {
+                'Content-Type': 'application/json'
+                 },
+             body: JSON.stringify({
+             "name": document.getElementById(inputName),
+             })
+            },).then(r=>{
+              console.log(r)
+})
+                
+            }
        
        
         //Loop to get all IDS
@@ -76,9 +102,6 @@ fetch('http://localhost:3000/users', {
 
             editbutton.onclick = function () {
   
-                let tabla = document.getElementById("tabla");
-                tabla.style.display = "none";
-                formulario.style.display = "block";
     
                 let inputName = document.getElementById("inputName");
                 inputName.value = elementname;

@@ -3,57 +3,59 @@ fetch('http://localhost:3000/users', {
 
 })
     .then(response => response.json())
-    .then(data  => {
-       
-            // Getting the div
-            let newStudent = document.getElementById("myNewStudent");
+    .then(data => {
 
-            // Getting the button to the form
-            let addNewStudent = document.getElementById("addNewStudent")
+        // Getting the div
+        let newStudent = document.getElementById("myNewStudent");
+
+        // Getting the button to the form
+        let addNewStudent = document.getElementById("addNewStudent")
 
 
-            // Getting the X that closes form
-            let span = document.getElementsByClassName("close")[0];
+        // Getting the X that closes form
+        let span = document.getElementsByClassName("close")[0];
 
-            // Function for the button
-            addNewStudent.onclick = function () {
-                newStudent.style.display = "block";
-                
-            }
+        // Function for the button
+        addNewStudent.onclick = function () {
+            newStudent.style.display = "block";
 
-            //Funtion for the X 
-            span.onclick = function () {
+        }
+
+        //Funtion for the X 
+        span.onclick = function () {
+            newStudent.style.display = "none";
+
+
+        }
+
+        // To close window
+        window.onclick = function (event) {
+            if (event.target == newStudent) {
                 newStudent.style.display = "none";
-              
-                
             }
+        }
 
-            // To close window
-            window.onclick = function(event) {
-                if (event.target == newStudent) {
-                  newStudent.style.display = "none";
-                }
-              }
+        // When Submit it's clicked
+        let submitNew = document.getElementById("submitNew");
 
-            // When Submit it's clicked
-            let submitNew = document.getElementById("submitNew");
-
-            submitNew.onclick = function () {
-                fetch("http://localhost:3000/users", {
+        submitNew.onclick = function () {
+            fetch("http://localhost:3000/users", {
                 method: "POST",
                 headers: {
-                'Content-Type': 'application/json'
-                 },
-             body: JSON.stringify({
-             "name": document.getElementById(inputName),
-             })
-            },).then(r=>{
-              console.log(r)
-})
-                
-            }
-       
-       
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+
+                    // PREGUNTA PARA SEBASTIAN
+
+                })
+            }).then(r => {
+                console.log(r)
+            })
+
+        }
+
+
         //Loop to get all IDS
         for (let i = 0; i < data.length; i++) {
             const studentId = data[i].id;
@@ -71,7 +73,7 @@ fetch('http://localhost:3000/users', {
             // Adding it to the corresponding div
             divId.appendChild(dataid)
 
-          
+
 
             // Creating the p tag for the text
             let datanames = document.createElement("p");
@@ -92,7 +94,7 @@ fetch('http://localhost:3000/users', {
             // Adding it to the corresponding div
             divprogr.appendChild(dataprogr)
 
-        
+
 
             let divbutton = document.createElement("div");
 
@@ -101,8 +103,13 @@ fetch('http://localhost:3000/users', {
             editbutton.innerText = "E"
 
             editbutton.onclick = function () {
-  
-    
+
+                // Getting the div
+                let student = document.getElementById("myStudent");
+
+                // Getting the X that closes form
+                let span = document.getElementsByClassName("close")[0];
+
                 let inputName = document.getElementById("inputName");
                 inputName.value = elementname;
 

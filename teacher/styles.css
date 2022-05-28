@@ -74,7 +74,7 @@ p {
     display: none;
 } */
 
-.newStudent {
+.newStudent, .student, .alertD {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -88,7 +88,7 @@ p {
     background-color: rgb(81 116 177 / 64%); /* Black w/ opacity */
   }
 
-  .newStudent-content {
+  .newStudent-content, .student-content, .alert-student {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -96,7 +96,7 @@ p {
     width: 80%;
   }
 
-  .close {
+  .close, .close2, .close3  {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -104,8 +104,23 @@ p {
   }
   
   .close:hover,
-  .close:focus {
+  .close:focus,
+  .close2:hover,
+  .close2:focus,
+  .close3:hover,
+  .close3:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
+
+  
+
+ 
+  .close2:hover,
+  .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+

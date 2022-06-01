@@ -38,15 +38,22 @@ fetch('http://localhost:3000/users', {
         // When Submit it's clicked
         let submitNew = document.getElementById("submitNew");
 
+        // Value from form Name
+        let inputName = document.getElementById("inputName")
+
+         // Value from form email
+         let inputEmail = document.getElementById("inputEmail")
+
         submitNew.onclick = function () {
             fetch("http://localhost:3000/users", {
                 method: "POST",
                 headers: {
-
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
 
-                    // PREGUNTA PARA SEBASTIAN
+                   name: inputName.value,
+                   email: inputEmail.value,
 
                 })
             }).then(r => {

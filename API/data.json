@@ -186,18 +186,6 @@
   ],
   "users": [
     {
-      "name": "Lorena",
-      "email": "lgarciac24@gmail.com",
-      "id": 1,
-      "sessionsGiven": 3
-    },
-    {
-      "name": "Yilmar",
-      "email": "yilmar@gmail.com",
-      "id": 2,
-      "sessionsGiven": 2
-    },
-    {
       "id": 3
     },
     {
@@ -213,6 +201,11 @@
       "name": "Sebas",
       "email": "sebas@gmail.com",
       "id": 6
+    },
+    {
+      "name": "Ana",
+      "email": "ana@ana.com",
+      "id": 7
     }
   ]
 }

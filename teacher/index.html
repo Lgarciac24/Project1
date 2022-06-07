@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,7 @@
     <title>TEACHER - Sebastián Education</title>
 
     <div class="header">
-        <img src= "../student/Image/logo.png" class="imgLogo" />
+        <img src="../student/Image/logo.png" class="imgLogo" />
 
     </div>
 
@@ -18,31 +19,34 @@
         <button id="cerrar">X</button>
     </div> -->
 
-   
+
 
     <div id="tabla">
         <div class="regclass">
-        <div class="">
-            <h1>Registro de clases</h1>
-        </div>
-        <div>
-            <button id="addNewStudent"> Add new student</button>
-
-            <div id="myNewStudent" class="newStudent">
-                <div class="newStudent-content">
-                    <span class="close">&times;</span>
-                    <h3>Formulario de Ingreso de nuevo estudiante</h3>
-                    Nombre: <input id="inputName" type="text">
-                    Email: <input id="inputEmail" type="text">
-                    <button id="submitNew">Submit</button>
-                  </div>
+            <div class="">
+                <h1>Classes Registry</h1>
             </div>
+            <div>
+                <button id="addNewStudent"> Add new student</button>
 
-           
+                <div id="myNewStudent" class="newStudent">
+                    <div class="newStudent-content">
+                        <span class="close">&times;</span>
+                        <h3>Form for new students ONLY</h3>
+                        Name: <input id="inputName" type="text">
+                        <br>
+                        Email: <input id="inputEmail" type="text">
+                        <br>
+                        Progress: <input id="inputProgr" type="text">
+                        <button id="submitNew">Submit</button>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-    </div>
         <div class="tablatitle">
-            <h3>Información Estudiantes</h3>
+            <h3>Students Information</h3>
         </div>
 
         <div id="infostudents">
@@ -52,8 +56,9 @@
                     <h3>Editar información de estudiante</h3>
                     Name: <input id="inputName2" type="text">
                     Email: <input id="inputEmail2" type="text">
+                    Progress: <input id="inputProgr2" type="text">
                     <button id="submitChanges">Submit changes</button>
-                  </div>
+                </div>
             </div>
             <div id="alertDelete" class="alertD">
                 <div class="alert-student">
@@ -61,51 +66,115 @@
                     <div id="questionAlert">
 
                     </div>
-                    <button id ="deleteButton">YES</button>
-                    <button id ="cancelButton">CANCEL</button>
+                    <button id="deleteButton">YES</button>
+                    <button id="cancelButton">CANCEL</button>
 
-                
+
                 </div>
             </div>
-
             <div id="infostudentstitle">
-           
-            <div id="column1">
-                <div class="blue"> <h4>Student ID</h4> </div>
-                
-                <div id="info"></div>
-            </div>
-      
-            <div id="column2">
-                <div class="blue"> <h4>Name</h4> </div>
-                <div id="names"></div>
-            </div>
-            <div id="column3">
-                <div class="blue"><h4>Progress</h4></div>
-                <div id="progresses"></div>
-            </div>
-            <div id="column4">
-                <div class="blue"><h4>Action</h4></div>
-                <div id="actions">
-                    
+                <div id="column1">
+                    <div class="blue">
+                        <h4>Student ID</h4>
+                    </div>
+
+                    <div id="info"></div>
                 </div>
-                
+                <div id="column2">
+                    <div class="blue">
+                        <h4>Name</h4>
+                    </div>
+                    <div id="names"></div>
+                </div>
+                <div id="column3">
+                    <div class="blue">
+                        <h4>Email</h4>
+                    </div>
+                    <div id="emails"></div>
+                </div>
+                <div id="column4">
+                    <div class="blue">
+                        <h4>Progress</h4>
+                    </div>
+                    <div id="progresses"></div>
+                </div>
+                <div id="column5">
+                    <div class="blue">
+                        <h4>Action</h4>
+                    </div>
+                    <div id="actions">
+
+                    </div>
+                </div>
             </div>
         </div>
-            
-           
+        <div class="tablatitle">
+            <h3>Classes Information</h3>
         </div>
-      
+        <div id="infoclasses">
+            <div id="columnclass1">
+                <div class="blue">
+                    <h4>Class #</h4>
+                </div>
+                <div id="classnumber">
+
+                </div>
+
+            </div>
+            <div id="columnclass2">
+                <div class="blue">
+                    <h4>Topic</h4>
+                </div>
+                <div id="classtopic">
+
+                </div>
+
+            </div>
+            <div id="columnclass3">
+                <div class="blue">
+                    <h4>Title</h4>
+                </div>
+                <div id="classtitle">
+
+                </div>
+
+            </div>
+            <div id="columnclass4">
+                <div class="blue">
+                    <h4>Description</h4>
+                </div>
+                <div id="classdescr">
+
+                </div>
+
+            </div>
+            <div id="columnclass5">
+                <div class="blue">
+                    <h4>Homework</h4>
+                </div>
+                <div id="classhomew">
+
+                </div>
+
+            </div>
+            <div id="columnclass6">
+                <div class="blue">
+                    <h4>Links</h4>
+                </div>
+                <div id="classlinks">
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
-    <div>
-        <div>
 
-        </div>
-    </div>
 </head>
+
 <body>
-    
+
 </body>
 <script src="scripts.js"></script>
+
 </html>

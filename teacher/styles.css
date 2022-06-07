@@ -38,12 +38,15 @@ body{
     border: 1px solid #7d7d7d;
 
 }
-#infostudentstitle{
+#infostudentstitle, #infoclasses{
     background-color: white;
     display: flex;
 }
-#column1, #column2, #column3, #column4 {
+#column1, #column2, #column3, #column4, #column5 {
 width: 25%;
+}
+#columnclass1, #columnclass2, #columnclass3, #columnclass4, #columnclass5, #columnclass6 {
+    width: 16.6%;
 }
 
 .blue{
@@ -73,7 +76,18 @@ p {
 /* #formulario {
     display: none;
 } */
-
+input{
+    margin: 5px;
+}
+#addNewStudent{
+    background-color: transparent;
+    border: 2px solid #548dda;
+    border-radius: 20px;
+    padding: 6px 20px;
+    color: #494747;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
 .newStudent, .student, .alertD {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -96,6 +110,16 @@ p {
     width: 80%;
   }
 
+  button{
+    margin-top: 5px;
+    background-color: transparent;
+    border: 2px solid #548dda;
+    border-radius: 20px;
+    padding: 1px 10px;
+    color: #494747;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+  }
   .close, .close2, .close3  {
     color: #aaaaaa;
     float: right;

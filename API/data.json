@@ -186,26 +186,34 @@
   ],
   "users": [
     {
-      "id": 3
-    },
-    {
-      "name": null,
-      "id": 4
-    },
-    {
       "name": "Luisa",
       "email": "luisa@gmail.com",
+      "progress": "4",
       "id": 5
     },
     {
       "name": "Sebas",
       "email": "sebas@gmail.com",
+      "progress": "1",
       "id": 6
     },
     {
       "name": "Ana",
       "email": "ana@ana.com",
+      "progress": "3",
       "id": 7
+    },
+    {
+      "name": "Lorena",
+      "email": "lorena@lorena.com",
+      "progress": "5",
+      "id": 8
+    },
+    {
+      "name": "Alfred",
+      "email": "alfie@gmail.com",
+      "progress": "0",
+      "id": 9
     }
   ]
 }

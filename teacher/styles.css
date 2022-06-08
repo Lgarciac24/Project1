@@ -42,11 +42,39 @@ body{
     background-color: white;
     display: flex;
 }
+
+#infoclasses{
+    border: 1px solid #7d7d7d;
+}
 #column1, #column2, #column3, #column4, #column5 {
 width: 25%;
 }
 #columnclass1, #columnclass2, #columnclass3, #columnclass4, #columnclass5, #columnclass6 {
     width: 16.6%;
+}
+
+.classNumberMargin{
+    display: grid;
+    grid-gap: 93px;
+}
+
+.topicMargin {
+    display: grid;
+    grid-gap: 93px;
+}
+
+.titleMargin {
+    display: grid;
+    grid-gap: 63px;
+}
+.descrMargin {
+    display: grid;
+    grid-gap: 36px;
+}
+
+.homewMargin {
+    display: grid;
+    grid-gap: 21px;
 }
 
 .blue{

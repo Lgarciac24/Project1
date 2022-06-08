@@ -211,8 +211,6 @@ fetch('http://localhost:3000/users', {})
       deleteButton.onclick = function () {
         alertDelete.style.display = 'block';
 
-        //Question -- PREGUNTAR S -- DESDE EL SEGUNDO D EMPIEZA A SUMAR LOS NOMRBES
-
         const textoAlerta = document.createElement('h4');
         textoAlerta.innerText =
           'Estas seguro que deseas eliminar ' + elementName + '?';
@@ -273,6 +271,7 @@ fetch('http://localhost:3000/clases', {})
       dataClassNumber.innerText = classNumber;
 
       const divClassNumber = document.getElementById('classnumber');
+      divClassNumber.className = 'classNumberMargin';
 
       // Adding it to the corresponding div
       divClassNumber.appendChild(dataClassNumber);
@@ -282,6 +281,7 @@ fetch('http://localhost:3000/clases', {})
       dataTopic.innerText = classTopic;
 
       const divClassTopic = document.getElementById('classtopic');
+      divClassTopic.className = 'topicMargin';
 
       // Adding it to the corresponding div
       divClassTopic.appendChild(dataTopic);
@@ -291,6 +291,7 @@ fetch('http://localhost:3000/clases', {})
       dataTitle.innerText = classTitle;
 
       const divClassTitle = document.getElementById('classtitle');
+      divClassTitle.className = 'titleMargin';
 
       // Adding it to the corresponding div
       divClassTitle.appendChild(dataTitle);
@@ -300,6 +301,7 @@ fetch('http://localhost:3000/clases', {})
       dataDescr.innerText = classDescription;
 
       const divClassDescr = document.getElementById('classdescr');
+      divClassDescr.className = 'descrMargin';
 
       // Adding it to the corresponding div
       divClassDescr.appendChild(dataDescr);
@@ -309,11 +311,65 @@ fetch('http://localhost:3000/clases', {})
       dataHomew.innerText = classHomew;
 
       const divClassHomew = document.getElementById('classhomew');
+      divClassHomew.className = 'homewMargin';
 
       // Adding it to the corresponding div
       divClassHomew.appendChild(dataHomew);
-    
+      
+
+
+      // FOR LOOP FOR ACCESS TO LINKS   
+
+      for (let m = 0; m < classlinks.length; m++) {
+        const element2 = classlinks;
+       
+        console.log(element2)
+        
+        
+
+ // Creating div container for links
+      const divLinks = document.createElement('div');
+        let text = document.createElement('p');
+        text.innerText = element2.title;
+
+        const divlinksht = document.getElementById('classlinks');
+
+      divLinks.appendChild(text);
+      divlinksht.appendChild(divLinks)
+
+      }
+
+      //   
 
     }
+
+
+    //     // Creating div container for links
+    // const divLinks = document.createElement('div');
+
+    // // Creating anchor tag for each one
+    // const linksicon = document.createElement('a');
+
+    // //adding icon image
+
+    // let iconImage = document.createElement('img');
+    // iconImage.src = "Image/link-icon.jpeg"
+    // iconImage.className = "iconImage"
+
+    // // Getting the div for links from HTML
+
+    // const divLinksColumn = document.getElementById('classlinks');
+
+    // // Adding the div and icon link to the html
+
+    // divLinksColumn.appendChild(divLinks);
+    // divLinks.appendChild(linksicon);
+    // linksicon.appendChild(iconImage);
+
+        
+    //   }
+      
+    // }
+    
 
 });

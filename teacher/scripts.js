@@ -46,16 +46,16 @@ window.onclick = function (event) {
 
 submitNew.onclick = function () {
   fetch('http://localhost:3000/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      name: inputName.value,
-      email: inputEmail.value,
-      progress: inputProgr.value,
-    }),
-  })
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: inputName.value,
+        email: inputEmail.value,
+        progress: inputProgr.value,
+      }),
+    })
     .then((r) => {
       newStudent.style.display = 'none';
       alert('Student Created successfuly');
@@ -77,44 +77,48 @@ fetch('http://localhost:3000/users', {})
       const elementEmail = data[i].email;
       const elementProgress = data[i].progress;
 
-      // Creating the p tag for the text
-      const dataId = document.createElement('p');
-      dataId.innerText = studentId;
+      // Creating the row for the data
+      const rowId = document.createElement('tr');
 
-      const divId = document.getElementById('info');
+      //Creating the td for Student ID
+      const columnId = document.createElement('td');
+      columnId.innerText = studentId;
 
-      // Adding it to the corresponding div
-      divId.appendChild(dataId);
+      // Getting the tbody
+      const tbodyId = document.getElementById('rowTable');
 
-      // Creating the p tag for the text
-      const dataNames = document.createElement('p');
-      dataNames.innerText = elementName;
+      // Adding to the HTML
+      tbodyId.appendChild(rowId);
+      rowId.appendChild(columnId);
 
-      const divNames = document.getElementById('names');
+      // Creating the td for the Name
 
-      // Adding it to the corresponding div
-      divNames.appendChild(dataNames);
-
-      // Creating the p tag for email text
-      const dataEmail = document.createElement('p');
-      dataEmail.innerText = elementEmail;
-
-      const divEmails = document.getElementById('emails');
-
-      // Adding it to the corresponding div
-      divEmails.appendChild(dataEmail);
+      const columnName = document.createElement('td');
+      columnName.innerText = elementName;
 
 
-      // Creating the p tag for the text
-      const dataProgr = document.createElement('p');
-      dataProgr.innerText = elementProgress;
+      // Adding to the HTML
+      rowId.appendChild(columnName);
 
-      const divProgr = document.getElementById('progresses');
+      // Creating the td for the Email
 
-      // Adding it to the corresponding div
-      divProgr.appendChild(dataProgr);
+      const columnEmail = document.createElement('td');
+      columnEmail.innerText = elementEmail;
 
-      const divButton = document.createElement('div');
+
+      // Adding to the HTML
+      rowId.appendChild(columnEmail);
+
+      // Creating the td for the Progress
+
+      const columnProgress = document.createElement('td');
+      columnProgress.innerText = elementProgress;
+
+      // Adding to the HTML
+      rowId.appendChild(columnProgress);
+
+      // Creating the td for the Buttons
+      const tdButton = document.createElement('td');
 
       // Creating button EDIT
       const editButton = document.createElement('button');
@@ -124,7 +128,7 @@ fetch('http://localhost:3000/users', {})
       editButton.setAttribute('studentEmail', elementEmail);
       editButton.setAttribute('studentProgr', elementProgress);
 
-      // Getting the div
+      // Getting the div 
       let student = document.getElementById('myStudent');
 
       // Getting the X that closes form
@@ -155,16 +159,16 @@ fetch('http://localhost:3000/users', {})
 
         submitChanges.onclick = function () {
           fetch('http://localhost:3000/users/' + editButton.id, {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: inputName2.value,
-              email: inputEmail2.value,
-              progress: inputProgr2.value,
-            }),
-          })
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                name: inputName2.value,
+                email: inputEmail2.value,
+                progress: inputProgr2.value,
+              }),
+            })
             .then((r) => {
               student.style.display = 'none';
               alert('Student Edited successfuly');
@@ -183,18 +187,16 @@ fetch('http://localhost:3000/users', {})
         }
       };
 
-      // Adding it to the corresponding div
-      divProgr.appendChild(dataProgr);
-
+     
       // Creating button DELETE
       const deleteButton = document.createElement('button');
       deleteButton.innerText = 'D';
 
-      const actions = document.getElementById('actions');
+      
 
-      actions.appendChild(divButton);
-      divButton.appendChild(editButton);
-      divButton.appendChild(deleteButton);
+      rowId.appendChild(tdButton);
+      tdButton.appendChild(editButton);
+      tdButton.appendChild(deleteButton);
 
       // Getting the first DIV
       const alertDelete = document.getElementById('alertDelete');
@@ -214,7 +216,7 @@ fetch('http://localhost:3000/users', {})
         const textoAlerta = document.createElement('h4');
         textoAlerta.innerText =
           'Estas seguro que deseas eliminar ' + elementName + '?';
- 
+
         const divAlert = document.getElementById('questionAlert');
 
         divAlert.appendChild(textoAlerta);
@@ -229,12 +231,12 @@ fetch('http://localhost:3000/users', {})
         deleteButton.onclick = function () {
           console.log(editButton.id);
           fetch('http://localhost:3000/users/' + editButton.id, {
-            method: 'DELETE',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: '',
-          })
+              method: 'DELETE',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: '',
+            })
             .then((r) => {
               alertDelete.style.display = 'none';
               alert('Student Removed successfuly');
@@ -256,120 +258,237 @@ fetch('http://localhost:3000/users', {})
   });
 
 fetch('http://localhost:3000/clases', {})
-.then((response) => response.json())
-.then ((data) => {
+  .then((response) => response.json())
+  .then((data) => {
     for (let i = 0; i < data.length; i++) {
-        const classNumber = data[i].title;
-        const classTopic  = data[i].subtitle;
-        const classTitle = data[i].mainTitle;
-        const classDescription = data[i].introText;
-        const classHomew = data[i].homework;
-        const classlinks = data[i].links;
+      const classNumber = data[i].title;
+      const classTopic = data[i].subtitle;
+      const classTitle = data[i].mainTitle;
+      const classDescription = data[i].introText;
+      const classHomew = data[i].homework;
+      const classlinks = data[i].links;
 
-     // Creating the p tag for the text for Class #
-      const dataClassNumber = document.createElement('p');
-      dataClassNumber.innerText = classNumber;
+      // Creating the row for the data
+      const rows2 = document.createElement('tr');
 
-      const divClassNumber = document.getElementById('classnumber');
-      divClassNumber.className = 'classNumberMargin';
+      //Creating the td for Class #
+      const columnClassNumber = document.createElement('td');
+      columnClassNumber.innerText = classNumber;
 
-      // Adding it to the corresponding div
-      divClassNumber.appendChild(dataClassNumber);
+      // Getting the tbody
+      const tbody2 = document.getElementById('rowTable2');
 
-      // Creating the p tag for the text for Topic
-      const dataTopic = document.createElement('p');
-      dataTopic.innerText = classTopic;
+      // Adding to the HTML
+      tbody2.appendChild(rows2);
+      rows2.appendChild(columnClassNumber);
 
-      const divClassTopic = document.getElementById('classtopic');
-      divClassTopic.className = 'topicMargin';
+      //Creating the td for Topic
+      const columnTopic = document.createElement('td');
+      columnTopic.innerText = classTopic;
 
-      // Adding it to the corresponding div
-      divClassTopic.appendChild(dataTopic);
+      // Adding to the HTML
+      rows2.appendChild(columnTopic);
 
-      // Creating the p tag for the text for Title
-      const dataTitle = document.createElement('p');
-      dataTitle.innerText = classTitle;
-
-      const divClassTitle = document.getElementById('classtitle');
-      divClassTitle.className = 'titleMargin';
-
-      // Adding it to the corresponding div
-      divClassTitle.appendChild(dataTitle);
-
-      // Creating the p tag for the text for Descrip
-      const dataDescr = document.createElement('p');
-      dataDescr.innerText = classDescription;
-
-      const divClassDescr = document.getElementById('classdescr');
-      divClassDescr.className = 'descrMargin';
-
-      // Adding it to the corresponding div
-      divClassDescr.appendChild(dataDescr);
-
-      // Creating the p tag for the text for Progr
-      const dataHomew = document.createElement('p');
-      dataHomew.innerText = classHomew;
-
-      const divClassHomew = document.getElementById('classhomew');
-      divClassHomew.className = 'homewMargin';
-
-      // Adding it to the corresponding div
-      divClassHomew.appendChild(dataHomew);
+      //Creating the td for Title
+      const columnTitle = document.createElement('td');
+      columnTitle.innerText = classTitle;
       
+      // Adding to the HTML
+      rows2.appendChild(columnTitle);
+    
+      //Creating the td for Description
+      const columnDescription = document.createElement('td');
+      columnDescription.innerText = classDescription;
+      
+      // Adding to the HTML
+      rows2.appendChild(columnDescription);
 
-
+      //Creating the td for Homework
+      const columnHomework = document.createElement('td');
+      columnHomework.innerText = classHomew;
+      
+      // Adding to the HTML
+      rows2.appendChild(columnHomework);
+     
+      // Creating table for links
+      const linksTable = document.createElement('table');
+      const linkstr = document.createElement('tr');
+     
       // FOR LOOP FOR ACCESS TO LINKS   
 
       for (let m = 0; m < classlinks.length; m++) {
-        const element2 = classlinks;
-       
-        console.log(element2)
+        const element2 = classlinks[m];
+
+        console.log(element2);
         
-        
+        //creating anchor for each link
+        const anchorLinks = document.createElement('a');
+        let linkIcon = document.createTextNode('🔗');
+        anchorLinks.href = element2.URL;
+        anchorLinks.target = '_blank';
+        //Creating nested table & tr & td
+      
+        const linkstd = document.createElement('td');
 
- // Creating div container for links
-      const divLinks = document.createElement('div');
-        let text = document.createElement('p');
-        text.innerText = element2.title;
-
-        const divlinksht = document.getElementById('classlinks');
-
-      divLinks.appendChild(text);
-      divlinksht.appendChild(divLinks)
+        rows2.appendChild(linksTable);
+        linksTable.appendChild(linkstr);
+        linkstr.appendChild(linkstd);
+        linkstd.appendChild(anchorLinks);
+        anchorLinks.appendChild(linkIcon);
 
       }
+      // Creating the td for the Action Buttons
+      const tdClassButtons = document.createElement('td');
 
-      //   
+      // Creating button EDIT
+      const editClassButton = document.createElement('button');
+      editClassButton.innerText = 'E';
+      editClassButton.title = classNumber;
+      editClassButton.setAttribute('classTopic', classTopic);
+      editClassButton.setAttribute('classTitle', classTitle);
+      editClassButton.setAttribute('classDescription', classDescription);
+      editClassButton.setAttribute('classHomew', classHomew);
+      editClassButton.setAttribute('classlinks', classlinks);
 
-    }
+      // Getting the div 
+      let classes = document.getElementById('myClasses');
 
+      // Getting the X that closes form
+      let span4 = document.getElementsByClassName('close4')[0];
 
-    //     // Creating div container for links
-    // const divLinks = document.createElement('div');
+      //Funtion for the X
+      span4.onclick = function () {
+        classes.style.display = 'none';
+      };
 
-    // // Creating anchor tag for each one
-    // const linksicon = document.createElement('a');
+      //Action when click E
+      editClassButton.onclick = function () {
+        // showing EDIT student info
+        classes.style.display = 'block';
 
-    // //adding icon image
+        //showing name from the data.json 
+        const inputClassN = document.getElementById('inputClassN');
+        inputClassN.value = editButton.getAttribute('classNumber');
 
-    // let iconImage = document.createElement('img');
-    // iconImage.src = "Image/link-icon.jpeg"
-    // iconImage.className = "iconImage"
+        const inputTopic = document.getElementById('inputTopic');
+        inputTopic.value = editButton.getAttribute('classTopic');
 
-    // // Getting the div for links from HTML
+        const inputTitle = document.getElementById('inputTitle');
+        inputTitle.value = editButton.getAttribute('classTitle');
 
-    // const divLinksColumn = document.getElementById('classlinks');
+        const inputDescription = document.getElementById('inputDescription');
+        inputDescription.value = editButton.getAttribute('classDescription');
 
-    // // Adding the div and icon link to the html
+        const inputHomework = document.getElementById('inputHomework');
+        inputHomework.value = editButton.getAttribute('classHomew');
 
-    // divLinksColumn.appendChild(divLinks);
-    // divLinks.appendChild(linksicon);
-    // linksicon.appendChild(iconImage);
+        const inputLinks = document.getElementById('inputLinks');
+        inputLinks.value = editButton.getAttribute('classlinks');
 
-        
-    //   }
+        // When submitChanges is clicked
+        let submitChangesClass = document.getElementById('submitChangesClass');
+
+        submitChangesClass.onclick = function () {
+          fetch('http://localhost:3000/clases/' + editClassButton.title, {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                title: inputClassN.value,
+                subtitle: inputTopic.value,
+                mainTitle: inputTitle.value,
+                introText: inputDescription.value,
+                homework: inputHomework.value,
+                links: inputLinks.value,
+                
+              }),
+            })
+            .then((r) => {
+              classes.style.display = 'none';
+              alert('Class Edited successfuly');
+              window.location.replace(window.location.href);
+            })
+            .catch(() => {
+              alert('Oh no! :( something went wrong');
+            });
+        };
+      };
+
+      // To close window
+      window.onclick = function (event) {
+        if (event.target == classes) {
+          classes.style.display = 'none';
+        }
+      };
+
+     
+      // Creating button DELETE
+      const deleteClassButton = document.createElement('button');
+      deleteClassButton.innerText = 'D';
+
       
-    // }
-    
 
-});
+      rows2.appendChild(tdClassButtons);
+      tdClassButtons.appendChild(editClassButton);
+      tdClassButtons.appendChild(deleteClassButton);
+
+      // Getting the first DIV
+      const alertDeleteClass = document.getElementById('alertDeleteClass');
+
+      // Getting the X that closes the alert
+      const close4 = document.getElementsByClassName('close4')[0];
+
+      // Function to close alert
+      close4.onclick = function () {
+        alertDeleteClass.style.display = 'none';
+      };
+
+      // When clicked D
+      deleteClassButton.onclick = function () {
+        alertDeleteClass.style.display = 'block';
+
+        const textoAlertaClass = document.createElement('h4');
+        textoAlertaClass.innerText =
+          'Estas seguro que deseas eliminar ' + classNumber + '?';
+
+        const divAlert = document.getElementById('questionAlert');
+
+        divAlert.appendChild(textoAlerta);
+
+        //function when Yes
+
+        //Getting YES button
+
+        let deleteButton = document.getElementById('deleteButton');
+
+        // When YES is clicked
+        deleteButton.onclick = function () {
+          console.log(editButton.id);
+          fetch('http://localhost:3000/users/' + editButton.id, {
+              method: 'DELETE',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: '',
+            })
+            .then((r) => {
+              alertDelete.style.display = 'none';
+              alert('Student Removed successfuly');
+              window.location.replace(window.location.href);
+            })
+            .catch(() => {
+              alert('Oh no! :( something went wrong');
+            });
+        };
+        //Getting NO button
+        const cancelButton = document.getElementById('cancelButton');
+
+        // When NO is clicked
+        cancelButton.onclick = function () {
+          alertDelete.style.display = 'none';
+        };
+      };
+   
+    }
+  });

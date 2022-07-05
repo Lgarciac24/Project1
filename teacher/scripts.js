@@ -343,24 +343,27 @@ fetch('http://localhost:3000/clases', {})
       // Creating button EDIT
       const editClassButton = document.createElement('button');
       editClassButton.innerText = 'E';
-      editClassButton.title = classNumber;
+      editClassButton.setAttribute('classNumber', classNumber);
       editClassButton.setAttribute('classTopic', classTopic);
       editClassButton.setAttribute('classTitle', classTitle);
       editClassButton.setAttribute('classDescription', classDescription);
       editClassButton.setAttribute('classHomew', classHomew);
       editClassButton.setAttribute('classlinks', classlinks);
-
+      
+      tdClassButtons.appendChild(editClassButton);
+      rows2.appendChild(tdClassButtons);
+   
       // Getting the div 
       let classes = document.getElementById('myClasses');
 
       // Getting the X that closes form
-      let span4 = document.getElementsByClassName('close4')[0];
+let span4 = document.getElementsByClassName('close4')[0];
 
-      //Funtion for the X
-      span4.onclick = function () {
-        classes.style.display = 'none';
-      };
-
+//Funtion for the X
+span4.onclick = function () {
+  classes.style.display = 'none';
+};
+      
       //Action when click E
       editClassButton.onclick = function () {
         // showing EDIT student info
@@ -368,22 +371,22 @@ fetch('http://localhost:3000/clases', {})
 
         //showing name from the data.json 
         const inputClassN = document.getElementById('inputClassN');
-        inputClassN.value = editButton.getAttribute('classNumber');
+        inputClassN.value = editClassButton.getAttribute('classNumber');
 
         const inputTopic = document.getElementById('inputTopic');
-        inputTopic.value = editButton.getAttribute('classTopic');
+        inputTopic.value = editClassButton.getAttribute('classTopic');
 
         const inputTitle = document.getElementById('inputTitle');
-        inputTitle.value = editButton.getAttribute('classTitle');
+        inputTitle.value = editClassButton.getAttribute('classTitle');
 
         const inputDescription = document.getElementById('inputDescription');
-        inputDescription.value = editButton.getAttribute('classDescription');
+        inputDescription.value = editClassButton.getAttribute('classDescription');
 
         const inputHomework = document.getElementById('inputHomework');
-        inputHomework.value = editButton.getAttribute('classHomew');
+        inputHomework.value = editClassButton.getAttribute('classHomew');
 
         const inputLinks = document.getElementById('inputLinks');
-        inputLinks.value = editButton.getAttribute('classlinks');
+        inputLinks.value = editClassButton.getAttribute('classlinks');
 
         // When submitChanges is clicked
         let submitChangesClass = document.getElementById('submitChangesClass');
@@ -415,6 +418,7 @@ fetch('http://localhost:3000/clases', {})
         };
       };
 
+
       // To close window
       window.onclick = function (event) {
         if (event.target == classes) {
@@ -429,8 +433,8 @@ fetch('http://localhost:3000/clases', {})
 
       
 
-      rows2.appendChild(tdClassButtons);
-      tdClassButtons.appendChild(editClassButton);
+     
+      
       tdClassButtons.appendChild(deleteClassButton);
 
       // Getting the first DIV

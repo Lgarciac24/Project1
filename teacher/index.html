@@ -87,6 +87,26 @@
 
         <div class="tablatitle">
             <h3>Classes Information</h3>
+
+            <div>
+                <button id="addNewClass"> Add new class</button>
+
+                <div id="myNewClass" class="newClass">
+                    <div class="newClass-content">
+                        <span class="close6">&times;</span>
+                        <h3>Form for new class ONLY</h3>
+                        Class #: <input id="inputNewClassN" type="text"><br>
+                        Topic: <input id="inputNewTopic" type="text"> <br>
+                        Title: <textarea rows='3' cols='50' id="inputNewTitle" ></textarea> <br>
+                        Description: <textarea rows='3' cols='50' id="inputNewDescription"></textarea>  <br>
+                        Homework: <textarea rows='3' cols='50' id="inputNewHomework" ></textarea>  <br>
+                        Links: <input id="inputNewLinks"></textarea>  <br>
+                        <button id="submitNewClass">Submit</button>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
         
         <table class="outerTable2">
@@ -115,21 +135,21 @@
                     <h3>Editar información de esta clase</h3>
                     Class #: <input id="inputClassN" type="text"><br>
                     Topic: <input id="inputTopic" type="text"> <br>
-                    Title: <textarea id="inputTitle" ></textarea> <br>
-                    Description: <input id="inputDescription" type="text"> <br>
-                    Homework: <input id="inputHomework" type="text"> <br>
-                    Links: <input id="inputLinks" type="text"><br>
+                    Title: <textarea rows='3' cols='50' id="inputTitle" ></textarea> <br>
+                    Description: <textarea rows='3' cols='50' id="inputDescription"></textarea>  <br>
+                    Homework: <textarea rows='3' cols='50' id="inputHomework" ></textarea>  <br>
+                    Links: <input id="inputLinks"></textarea>  <br>
                     <button id="submitChangesClass">Submit changes</button>
                 </div>
             </div>
             <div id="alertDeleteClass" class="alertD">
                 <div class="alert-student">
-                    <span class="close3">&times;</span>
-                    <div id="questionAlert">
+                    <span class="close5">&times;</span>
+                    <div id="questionAlertClass">
 
                     </div>
-                    <button id="deleteButton">YES</button>
-                    <button id="cancelButton">CANCEL</button>
+                    <button id="deleteButtonClass">YES</button>
+                    <button id="cancelButtonClass">CANCEL</button>
 
 
                 </div>

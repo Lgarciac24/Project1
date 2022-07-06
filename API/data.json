@@ -186,7 +186,7 @@
   ],
   "users": [
     {
-      "name": "Luisa",
+      "name": "Luisa Maria",
       "email": "luisa@gmail.com",
       "progress": "4",
       "id": 5
@@ -196,12 +196,6 @@
       "email": "sebas@gmail.com",
       "progress": "1",
       "id": 6
-    },
-    {
-      "name": "Ana",
-      "email": "ana@ana.com",
-      "progress": "3",
-      "id": 7
     },
     {
       "name": "Lorena",
@@ -214,6 +208,12 @@
       "email": "alfie@gmail.com",
       "progress": "0",
       "id": 9
+    },
+    {
+      "name": "Yilmar Alberto",
+      "email": "yito@youporn.com",
+      "progress": "0",
+      "id": 10
     }
   ]
 }

@@ -229,7 +229,7 @@ fetch('http://localhost:3000/users', {})
 
         // When YES is clicked
         deleteButton.onclick = function () {
-          console.log(editButton.id);
+         
           fetch('http://localhost:3000/users/' + editButton.id, {
               method: 'DELETE',
               headers: {
@@ -267,6 +267,81 @@ fetch('http://localhost:3000/clases', {})
       const classDescription = data[i].introText;
       const classHomew = data[i].homework;
       const classlinks = data[i].links;
+
+      
+    // Adding new class
+    // Getting the div of the form
+  const newClass = document.getElementById('myNewClass');
+
+    // Getting the button to the form
+    const addNewClass = document.getElementById('addNewClass');
+
+    // Getting the X that closes form
+    const span6 = document.getElementsByClassName('close6')[0];
+
+// When Submit it's clicked
+const submitNewClass = document.getElementById('submitNewClass');
+
+// Value from form Class Number
+const inputNewClassN = document.getElementById('inputNewClassN');
+
+// Value from form Topic
+const inputNewTopic = document.getElementById('inputNewTopic');
+
+// Value from form Title
+const inputNewTitle = document.getElementById('inputNewTitle');
+
+// Value from form Description
+const inputNewDescription = document.getElementById('inputNewDescription');
+
+// Value from form Homework
+const inputNewHomework = document.getElementById('inputNewHomework');
+
+// Value from form Links
+const inputNewLinks = document.getElementById('inputNewLinks');
+
+// Function for the button
+addNewClass.onclick = function () {
+  newClass.style.display = 'block';
+};
+
+//Funtion for the X
+span6.onclick = function () {
+  newClass.style.display = 'none';
+};
+
+// To close window
+window.onclick = function (event) {
+  if (event.target == newClass) {
+    newClass.style.display = 'none';
+  }
+};
+
+submitNewClass.onclick = function () {
+  fetch('http://localhost:3000/clases',  {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: inputNewClassN.value,
+        subtitle: inputNewTopic.value,
+        mainTitle: inputNewTitle.value,
+        introText: inputNewDescription.value,
+        homework: inputNewHomework.value,
+        links: inputNewLinks.value,
+      }),
+    })
+    .then((r) => {
+      console.log(r)
+      newClass.style.display = 'none';
+      alert('Class Created successfuly');
+      window.location.replace(window.location.href);
+    })
+    .catch(() => {
+      alert('Oh no! :( something went wrong');
+    });
+};
 
       // Creating the row for the data
       const rows2 = document.createElement('tr');
@@ -318,8 +393,6 @@ fetch('http://localhost:3000/clases', {})
 
       for (let m = 0; m < classlinks.length; m++) {
         const element2 = classlinks[m];
-
-        console.log(element2);
         
         //creating anchor for each link
         const anchorLinks = document.createElement('a');
@@ -392,7 +465,7 @@ span4.onclick = function () {
         let submitChangesClass = document.getElementById('submitChangesClass');
 
         submitChangesClass.onclick = function () {
-          fetch('http://localhost:3000/clases/' + editClassButton.title, {
+          fetch('http://localhost:3000/clases/' + editClassButton.classNumber, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
@@ -432,19 +505,16 @@ span4.onclick = function () {
       deleteClassButton.innerText = 'D';
 
       
-
-     
-      
       tdClassButtons.appendChild(deleteClassButton);
 
       // Getting the first DIV
       const alertDeleteClass = document.getElementById('alertDeleteClass');
 
       // Getting the X that closes the alert
-      const close4 = document.getElementsByClassName('close4')[0];
+      const close5 = document.getElementsByClassName('close5')[0];
 
       // Function to close alert
-      close4.onclick = function () {
+      close5.onclick = function () {
         alertDeleteClass.style.display = 'none';
       };
 
@@ -454,22 +524,22 @@ span4.onclick = function () {
 
         const textoAlertaClass = document.createElement('h4');
         textoAlertaClass.innerText =
-          'Estas seguro que deseas eliminar ' + classNumber + '?';
+          'Estas seguro que deseas eliminar ' + 'Clase ' + classNumber + '?';
 
-        const divAlert = document.getElementById('questionAlert');
+        const divAlertClass = document.getElementById('questionAlertClass');
 
-        divAlert.appendChild(textoAlerta);
+        divAlertClass.appendChild(textoAlertaClass);
 
         //function when Yes
 
         //Getting YES button
 
-        let deleteButton = document.getElementById('deleteButton');
+        let deleteButtonClass = document.getElementById('deleteButtonClass');
 
         // When YES is clicked
-        deleteButton.onclick = function () {
-          console.log(editButton.id);
-          fetch('http://localhost:3000/users/' + editButton.id, {
+        deleteButtonClass.onclick = function () {
+        
+          fetch('http://localhost:3000/users/' + editClassButton.classNumber, {
               method: 'DELETE',
               headers: {
                 'Content-Type': 'application/json',
@@ -477,7 +547,7 @@ span4.onclick = function () {
               body: '',
             })
             .then((r) => {
-              alertDelete.style.display = 'none';
+              alertDeleteClass.style.display = 'none';
               alert('Student Removed successfuly');
               window.location.replace(window.location.href);
             })
@@ -486,13 +556,12 @@ span4.onclick = function () {
             });
         };
         //Getting NO button
-        const cancelButton = document.getElementById('cancelButton');
+        const cancelButtonClass = document.getElementById('cancelButtonClass');
 
         // When NO is clicked
-        cancelButton.onclick = function () {
-          alertDelete.style.display = 'none';
+        cancelButtonClass.onclick = function () {
+          alertDeleteClass.style.display = 'none';
         };
       };
-   
     }
   });

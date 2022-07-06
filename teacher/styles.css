@@ -126,7 +126,13 @@ a{
 input{
     margin: 5px;
 }
-#addNewStudent{
+
+td{
+    vertical-align: top;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+#addNewStudent, #addNewClass{
     background-color: transparent;
     border: 2px solid #548dda;
     border-radius: 20px;
@@ -135,7 +141,17 @@ input{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
 }
-.newStudent, .student, .alertD {
+
+#addNewClass{
+    margin-bottom: 20px;
+}
+
+.tablatitle {
+        display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.newStudent, .student, .alertD, .newClass {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -149,7 +165,7 @@ input{
     background-color: rgb(81 116 177 / 64%); /* Black w/ opacity */
   }
 
-  .newStudent-content, .student-content, .alert-student {
+  .newStudent-content, .student-content, .alert-student, .newClass-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -167,7 +183,7 @@ input{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
   }
-  .close, .close2, .close3  {
+  .close, .close2, .close3, .close4, .close5, .close6  {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -179,19 +195,16 @@ input{
   .close2:hover,
   .close2:focus,
   .close3:hover,
-  .close3:focus {
+  .close3:focus,
+  .close4:hover,
+  .close4:focus,
+  .close5:hover,
+  .close5:focus,
+  .close6:hover,
+  .close6:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
 
-  
-
- 
-  .close2:hover,
-  .close2:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
 

@@ -25,11 +25,33 @@
                     <div class="newStudent-content">
                         <span class="close">&times;</span>
                         <h3>Form for new students ONLY</h3>
-                        Name: <input id="inputName" type="text">
-                        <br>
-                        Email: <input id="inputEmail" type="text">
-                        <br>
-                        Progress: <input id="inputProgr" type="text">
+                        <table>
+                            <tr>
+                                <td class="form-style">
+                                    Name:
+                                </td>
+                                <td class="form-style">
+                                    <input id="inputName" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Email:
+                                </td>
+                                <td class="form-style">
+                                    <input id="inputEmail" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Progress:
+                                </td>
+                                <td class="form-style">
+                                    <input id="inputProgr" type="text">
+                                </td>
+                            </tr>
+                        </table>
+
                         <button id="submitNew">Submit</button>
                     </div>
                 </div>
@@ -46,9 +68,35 @@
                 <div class="student-content">
                     <span class="close2">&times;</span>
                     <h3>Editar información de estudiante</h3>
-                    Name: <input id="inputName2" type="text">
+                    <table>
+                        <tr>
+                            <td class="form-style">
+                                Name:
+                            </td>
+                            <td class="form-style">
+                                <input id="inputName2" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Email:
+                            </td>
+                            <td class="form-style">
+                                <input id="inputEmail2" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Progress:
+                            </td>
+                            <td class="form-style">
+                                <input id="inputProgr" type="text">
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Name: <input id="inputName2" type="text">
                     Email: <input id="inputEmail2" type="text">
-                    Progress: <input id="inputProgr2" type="text">
+                    Progress: <input id="inputProgr2" type="text"> -->
                     <button id="submitChanges">Submit changes</button>
                 </div>
             </div>
@@ -65,7 +113,7 @@
                 </div>
             </div>
         </div>
-       
+
 
         <table class="outerTable">
             <thead id="titles">
@@ -79,7 +127,7 @@
 
             </thead>
             <tbody id="rowTable">
-                
+
             </tbody>
 
 
@@ -95,12 +143,77 @@
                     <div class="newClass-content">
                         <span class="close6">&times;</span>
                         <h3>Form for new class ONLY</h3>
-                        Class #: <input id="inputNewClassN" type="text"><br>
-                        Topic: <input id="inputNewTopic" type="text"> <br>
-                        Title: <textarea rows='3' cols='50' id="inputNewTitle" ></textarea> <br>
-                        Description: <textarea rows='3' cols='50' id="inputNewDescription"></textarea>  <br>
-                        Homework: <textarea rows='3' cols='50' id="inputNewHomework" ></textarea>  <br>
-                        Links: <input id="inputNewLinks"></textarea>  <br>
+                        <table>
+                            <tr>
+                                <td class="form-style">
+                                    Class #:
+                                </td>
+                                <td class="form-style">
+                                    <input id="inputNewClassN" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Topic:
+                                </td>
+                                <td class="form-style">
+                                    <input id="inputNewTopic" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Title:
+                                </td>
+                                <td class="form-style">
+                                    <textarea rows='3' cols='50' id="inputNewTitle"></textarea>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Description:
+                                </td>
+                                <td class="form-style">
+                                    <textarea rows='3' cols='50' id="inputNewDescription"></textarea>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Homework:
+                                </td>
+                                <td class="form-style">
+                                    <textarea rows='3' cols='50' id="inputNewHomework"></textarea>
+                            </tr>
+                            <tr>
+                                <td class="form-style">
+                                    Links:
+                                </td>
+                                <td>
+                                    <table id="table-links">
+                                        <tr>
+                                            <td class="form-style">
+                                                <strong>Title</strong>
+                                            </td>
+    
+                                            <td class="form-style">
+                                                <strong>URL</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="form-style">
+                                               <input id="inputNewLinkTitle" type="text">
+                                            </td>
+    
+                                            <td class="form-style">
+                                                <input id="inputNewLinkURL" type="text">
+                                            </td>
+                                        </tr>
+                                        <button id="addLink">+</button>
+    
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
                         <button id="submitNewClass">Submit</button>
                     </div>
                 </div>
@@ -108,7 +221,7 @@
 
             </div>
         </div>
-        
+
         <table class="outerTable2">
             <thead id="titles">
                 <tr>
@@ -123,8 +236,8 @@
 
             </thead>
             <tbody id="rowTable2">
-                
-                
+
+
             </tbody>
 
         </table>
@@ -133,12 +246,73 @@
                 <div class="student-content">
                     <span class="close4">&times;</span>
                     <h3>Editar información de esta clase</h3>
-                    Class #: <input id="inputClassN" type="text"><br>
-                    Topic: <input id="inputTopic" type="text"> <br>
-                    Title: <textarea rows='3' cols='50' id="inputTitle" ></textarea> <br>
-                    Description: <textarea rows='3' cols='50' id="inputDescription"></textarea>  <br>
-                    Homework: <textarea rows='3' cols='50' id="inputHomework" ></textarea>  <br>
-                    Links: <input id="inputLinks"></textarea>  <br>
+                    <table>
+
+                        <tr>
+                            <td class="form-style">
+                                Class #:
+                            </td>
+                            <td class="form-style">
+                                <input id="inputClassN" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Topic:
+                            </td>
+                            <td class="form-style">
+                                <input id="inputTopic" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Title:
+                            </td>
+                            <td class="form-style">
+                                <textarea rows='3' cols='50' id="inputTitle"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Description:
+                            </td>
+                            <td class="form-style">
+                                <textarea rows='3' cols='50' id="inputDescription"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Homework:
+                            </td>
+                            <td class="form-style">
+                                <textarea rows='3' cols='50' id="inputHomework"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-style">
+                                Links:
+                            </td>
+                            <td>
+                                <table id="table-editlinks">
+                                    <tr>
+                                        <td class="form-style">
+                                            <strong>Title</strong>
+                                        </td>
+
+                                        <td class="form-style">
+                                            <strong>URL</strong>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </td>
+
+
+                        </tr>
+
+                    </table>
+
+
                     <button id="submitChangesClass">Submit changes</button>
                 </div>
             </div>

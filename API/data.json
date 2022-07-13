@@ -1,7 +1,7 @@
 {
   "clases": [
     {
-      "title": "1",
+      "id": "1",
       "subtitle": "HTML & CSS",
       "mainTitle": "Bienvenido a tu primera clase. ¿Estás listo? 🤘",
       "introText": "En esta clase aprenderás los conocimientos básicos de HTML y CSS",
@@ -20,7 +20,7 @@
       "given": true
     },
     {
-      "title": "2",
+      "id": "2",
       "subtitle": "Introducción a JavaScript",
       "mainTitle": "Segunda Clase! Vas muy bien 😊",
       "introText": "En esta clase comenzarás a programar con tu nuevo mejor amigo JavaScript. Aprenderás qué son funciones y cómo hacer que se ejecuten al hacer click en un botón. También aprenderás sobre los condicionales if/else. No te preocupes, you got this!",
@@ -39,7 +39,7 @@
       "given": true
     },
     {
-      "title": "3",
+      "id": "3",
       "subtitle": "If/else & Loops",
       "mainTitle": "Tercera Clase! Keep going! 👊",
       "introText": "En esta clase continuaremos con JavaScript, usarás los FOR loops y además aprenderás los operadores ||,&&, % que te serán tan útiles de ahora en adelante.",
@@ -62,7 +62,7 @@
       "given": true
     },
     {
-      "title": "4",
+      "id": "4",
       "subtitle": "While Loops",
       "mainTitle": "Cuarta clase! 🧠",
       "introText": "En esta clase continuaremos con loops, pero en esta ocasión serán WHILE loops. Muy similar a los FOR loops. Además aprenderás typeOf datos de Javascript y otros datos muy útiles como parseInt, parseFloat y toString.",
@@ -85,7 +85,7 @@
       "given": false
     },
     {
-      "title": "5",
+      "id": "5",
       "subtitle": "Arrays",
       "mainTitle": "Quinta clase! 🖐",
       "introText": "Hoy verás los arrays o arreglos y cómo usarlos para guardar todo tipo de datos bajo una misma categoría.",
@@ -104,7 +104,7 @@
       "given": false
     },
     {
-      "title": "6",
+      "id": "6",
       "subtitle": "Objects",
       "mainTitle": "Esta es tu sexta clase! Ya has llegado a más de la mitad de tu journey! 🎓 ",
       "introText": "En esta clase verás objetos y sus propiedades, además empezarás a usar Local Storage y JSON.",
@@ -123,7 +123,7 @@
       "given": false
     },
     {
-      "title": "7",
+      "id": "7",
       "subtitle": "API and Fetch",
       "mainTitle": "Séptima clase! 🧳 Cada vez más cerca!!",
       "introText": "En esta clase entrarás en el tema de los A.P.Is y la función Fetch para poder hacer uso de cualquier API.",
@@ -142,7 +142,7 @@
       "given": false
     },
     {
-      "title": "8",
+      "id": "8",
       "subtitle": "DOM",
       "mainTitle": "Clase Octava",
       "introText": "En esta clase aprenderás cómo crear y modificar datos del HTML desde javascript",
@@ -157,7 +157,7 @@
       "given": false
     },
     {
-      "title": "9",
+      "id": "9",
       "subtitle": "GIT, GITHUB & Terminal",
       "mainTitle": "Ultima clase. Introduccion a Proyecto 1",
       "introText": "En esta clase verás cómo conectar tu laptop al terminal para registrar las modificaciones y que estén actualizadas en GITHUB",
@@ -172,7 +172,7 @@
       "given": false
     },
     {
-      "title": "10",
+      "id": "10",
       "subtitle": "Proyecto 1",
       "mainTitle": "Revisión Proyecto 1",
       "introText": "En esta clase se revisará el proyecto que creaste y aclararás todas tus dudas",

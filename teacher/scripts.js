@@ -187,12 +187,10 @@ fetch('http://localhost:3000/users', {})
         }
       };
 
-     
+
       // Creating button DELETE
       const deleteButton = document.createElement('button');
       deleteButton.innerText = 'D';
-
-      
 
       rowId.appendChild(tdButton);
       tdButton.appendChild(editButton);
@@ -229,7 +227,7 @@ fetch('http://localhost:3000/users', {})
 
         // When YES is clicked
         deleteButton.onclick = function () {
-         
+
           fetch('http://localhost:3000/users/' + editButton.id, {
               method: 'DELETE',
               headers: {
@@ -261,87 +259,113 @@ fetch('http://localhost:3000/clases', {})
   .then((response) => response.json())
   .then((data) => {
     for (let i = 0; i < data.length; i++) {
-      const classNumber = data[i].title;
+      const classNumber = data[i].id;
       const classTopic = data[i].subtitle;
       const classTitle = data[i].mainTitle;
       const classDescription = data[i].introText;
       const classHomew = data[i].homework;
       const classlinks = data[i].links;
 
-      
-    // Adding new class
-    // Getting the div of the form
-  const newClass = document.getElementById('myNewClass');
 
-    // Getting the button to the form
-    const addNewClass = document.getElementById('addNewClass');
+      // Adding new class
+      // Getting the div of the form
+      const newClass = document.getElementById('myNewClass');
 
-    // Getting the X that closes form
-    const span6 = document.getElementsByClassName('close6')[0];
+      // Getting the button to the form
+      const addNewClass = document.getElementById('addNewClass');
 
-// When Submit it's clicked
-const submitNewClass = document.getElementById('submitNewClass');
+      // Getting the X that closes form
+      const span6 = document.getElementsByClassName('close6')[0];
 
-// Value from form Class Number
-const inputNewClassN = document.getElementById('inputNewClassN');
+      // When Submit it's clicked
+      const submitNewClass = document.getElementById('submitNewClass');
 
-// Value from form Topic
-const inputNewTopic = document.getElementById('inputNewTopic');
+      // Value from form Class Number
+      const inputNewClassN = document.getElementById('inputNewClassN');
 
-// Value from form Title
-const inputNewTitle = document.getElementById('inputNewTitle');
+      // Value from form Topic
+      const inputNewTopic = document.getElementById('inputNewTopic');
 
-// Value from form Description
-const inputNewDescription = document.getElementById('inputNewDescription');
+      // Value from form Title
+      const inputNewTitle = document.getElementById('inputNewTitle');
 
-// Value from form Homework
-const inputNewHomework = document.getElementById('inputNewHomework');
+      // Value from form Description
+      const inputNewDescription = document.getElementById('inputNewDescription');
 
-// Value from form Links
-const inputNewLinks = document.getElementById('inputNewLinks');
+      // Value from form Homework
+      const inputNewHomework = document.getElementById('inputNewHomework');
 
-// Function for the button
-addNewClass.onclick = function () {
-  newClass.style.display = 'block';
-};
+      // Value from form Links
+      const inputNewLinks = document.getElementById('inputNewLinks');
 
-//Funtion for the X
-span6.onclick = function () {
-  newClass.style.display = 'none';
-};
+      // Function for the button
+      addNewClass.onclick = function () {
+        newClass.style.display = 'block';
+      };
 
-// To close window
-window.onclick = function (event) {
-  if (event.target == newClass) {
-    newClass.style.display = 'none';
-  }
-};
+      //Funtion for the X
+      span6.onclick = function () {
+        newClass.style.display = 'none';
+      };
 
-submitNewClass.onclick = function () {
-  fetch('http://localhost:3000/clases',  {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        title: inputNewClassN.value,
-        subtitle: inputNewTopic.value,
-        mainTitle: inputNewTitle.value,
-        introText: inputNewDescription.value,
-        homework: inputNewHomework.value,
-        links: inputNewLinks.value,
-      }),
-    })
-    .then((r) => {
-      console.log(r)
-      newClass.style.display = 'none';
-      alert('Class Created successfuly');
-      window.location.replace(window.location.href);
-    })
-    .catch(() => {
-      alert('Oh no! :( something went wrong');
-    });
-};
+      // To close window
+      window.onclick = function (event) {
+        if (event.target == newClass) {
+          newClass.style.display = 'none';
+        }
+      };
+
+      //Adding new Link
+//Getting the + button
+
+const addLink = document.getElementById('addLink');
+
+addLink.onclick = function () {
+
+  const tableLinksAdd = document.getElementById('table-links');
+
+  const trToAddLinks = document.createElement('tr');
+  const tdToAddLinkTitle = document.createElement('td');
+  tdToAddLinkTitle.className = 'form-style';
+  const tdToAddLinkURL = document.createElement('td');
+  tdToAddLinkURL.className = 'form-style';
+  const inputForNewTitle = document.createElement('input');
+  const inputForNewURL = document.createElement('input');
+
+  tableLinksAdd.appendChild(trToAddLinks);
+  trToAddLinks.appendChild(tdToAddLinkTitle);
+  tdToAddLinkTitle.appendChild(inputForNewTitle);
+  trToAddLinks.appendChild(tdToAddLinkURL);
+  tdToAddLinkURL.appendChild(inputForNewURL);
+  
+
+  
+}
+      submitNewClass.onclick = function () {
+        fetch('http://localhost:3000/clases', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              id: inputNewClassN.value,
+              subtitle: inputNewTopic.value,
+              mainTitle: inputNewTitle.value,
+              introText: inputNewDescription.value,
+              homework: inputNewHomework.value,
+              links: inputNewLinks.value,
+            }),
+          })
+          .then((r) => {
+            console.log(r)
+            newClass.style.display = 'none';
+            alert('Class Created successfuly');
+            window.location.replace(window.location.href);
+          })
+          .catch(() => {
+            alert('Oh no! :( something went wrong');
+          });
+      };
 
       // Creating the row for the data
       const rows2 = document.createElement('tr');
@@ -367,40 +391,40 @@ submitNewClass.onclick = function () {
       //Creating the td for Title
       const columnTitle = document.createElement('td');
       columnTitle.innerText = classTitle;
-      
+
       // Adding to the HTML
       rows2.appendChild(columnTitle);
-    
+
       //Creating the td for Description
       const columnDescription = document.createElement('td');
       columnDescription.innerText = classDescription;
-      
+
       // Adding to the HTML
       rows2.appendChild(columnDescription);
 
       //Creating the td for Homework
       const columnHomework = document.createElement('td');
       columnHomework.innerText = classHomew;
-      
+
       // Adding to the HTML
       rows2.appendChild(columnHomework);
-     
+
       // Creating table for links
       const linksTable = document.createElement('table');
       const linkstr = document.createElement('tr');
-     
+
       // FOR LOOP FOR ACCESS TO LINKS   
 
       for (let m = 0; m < classlinks.length; m++) {
         const element2 = classlinks[m];
-        
+
         //creating anchor for each link
         const anchorLinks = document.createElement('a');
-        let linkIcon = document.createTextNode('🔗');
+        const linkIcon = document.createTextNode('🔗');
         anchorLinks.href = element2.URL;
         anchorLinks.target = '_blank';
         //Creating nested table & tr & td
-      
+
         const linkstd = document.createElement('td');
 
         rows2.appendChild(linksTable);
@@ -416,27 +440,28 @@ submitNewClass.onclick = function () {
       // Creating button EDIT
       const editClassButton = document.createElement('button');
       editClassButton.innerText = 'E';
+      editClassButton.id = classNumber;
       editClassButton.setAttribute('classNumber', classNumber);
       editClassButton.setAttribute('classTopic', classTopic);
       editClassButton.setAttribute('classTitle', classTitle);
       editClassButton.setAttribute('classDescription', classDescription);
       editClassButton.setAttribute('classHomew', classHomew);
       editClassButton.setAttribute('classlinks', classlinks);
-      
+
       tdClassButtons.appendChild(editClassButton);
       rows2.appendChild(tdClassButtons);
-   
+
       // Getting the div 
       let classes = document.getElementById('myClasses');
 
       // Getting the X that closes form
-let span4 = document.getElementsByClassName('close4')[0];
+      let span4 = document.getElementsByClassName('close4')[0];
 
-//Funtion for the X
-span4.onclick = function () {
-  classes.style.display = 'none';
-};
-      
+      //Funtion for the X
+      span4.onclick = function () {
+        classes.style.display = 'none';
+      };
+
       //Action when click E
       editClassButton.onclick = function () {
         // showing EDIT student info
@@ -458,26 +483,75 @@ span4.onclick = function () {
         const inputHomework = document.getElementById('inputHomework');
         inputHomework.value = editClassButton.getAttribute('classHomew');
 
-        const inputLinks = document.getElementById('inputLinks');
-        inputLinks.value = editClassButton.getAttribute('classlinks');
+        //showing links info
+        //creating tr and td for links
 
-        // When submitChanges is clicked
+        const tableEditLinks = document.getElementById('table-editlinks');
+
+        for (let a = 0; a < classlinks.length; a++) {
+          const listLinks = classlinks[a];
+
+          const listLinksTitle = listLinks.title;
+          const listLinksURL = listLinks.URL;
+
+
+
+          const trForLinks = document.createElement('tr');
+
+          const tdForTitles = document.createElement('td');
+          tdForTitles.className = 'form-style';
+          const tdForLinks = document.createElement('td');
+          tdForLinks.className = 'form-style';
+
+          const tdForURLs = document.createElement('td');
+          tdForURLs.className = 'form-style';
+
+          const inputTitleLinks = document.createElement('input');
+          const inputURLLinks = document.createElement('input');
+
+          inputTitleLinks.innerText = listLinksTitle;
+          inputTitleLinks.type = 'text';
+          inputTitleLinks.setAttribute('id', 'inputTitleLink');
+          inputURLLinks.innerText = listLinksURL;
+          inputURLLinks.type = 'text';
+          inputURLLinks.setAttribute('id', 'inputURLLink');
+
+          tableEditLinks.appendChild(trForLinks);
+          trForLinks.appendChild(tdForTitles);
+          tdForTitles.appendChild(inputTitleLinks);
+          trForLinks.appendChild(tdForURLs);
+          tdForURLs.appendChild(inputURLLinks);
+
+          editClassButton.setAttribute('listLinksTitle', listLinksTitle);
+          editClassButton.setAttribute('listLinksURL', listLinksURL);
+
+          inputTitleLinks.value = editClassButton.getAttribute('listLinksTitle');
+          inputURLLinks.value = editClassButton.getAttribute('listLinksURL');
+
+
+
+        }
+
+
+
+        
         let submitChangesClass = document.getElementById('submitChangesClass');
 
         submitChangesClass.onclick = function () {
-          fetch('http://localhost:3000/clases/' + editClassButton.classNumber, {
+          fetch('http://localhost:3000/clases/' + editClassButton.id, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                title: inputClassN.value,
+                id: inputClassN.value,
                 subtitle: inputTopic.value,
                 mainTitle: inputTitle.value,
                 introText: inputDescription.value,
                 homework: inputHomework.value,
-                links: inputLinks.value,
-                
+                links: inputTitleLinks.value, //PREGUNTAR SEBASTIAN
+
+
               }),
             })
             .then((r) => {
@@ -499,12 +573,12 @@ span4.onclick = function () {
         }
       };
 
-     
+
       // Creating button DELETE
       const deleteClassButton = document.createElement('button');
       deleteClassButton.innerText = 'D';
 
-      
+
       tdClassButtons.appendChild(deleteClassButton);
 
       // Getting the first DIV
@@ -538,8 +612,8 @@ span4.onclick = function () {
 
         // When YES is clicked
         deleteButtonClass.onclick = function () {
-        
-          fetch('http://localhost:3000/users/' + editClassButton.classNumber, {
+
+          fetch('http://localhost:3000/clases/' + editClassButton.id, {
               method: 'DELETE',
               headers: {
                 'Content-Type': 'application/json',

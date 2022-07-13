@@ -155,7 +155,7 @@ td{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 10px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -173,12 +173,17 @@ td{
     width: 80%;
   }
 
+  .form-style{
+    border: none;
+    vertical-align: baseline;
+  }
+
   button{
     margin-top: 5px;
     background-color: transparent;
     border: 2px solid #548dda;
     border-radius: 20px;
-    padding: 1px 10px;
+    padding: 5px 10px;
     color: #494747;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
